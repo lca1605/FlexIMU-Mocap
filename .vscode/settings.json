@@ -1,0 +1,28 @@
+{
+    "cmake.sourceDirectory": "${workspaceFolder}/esp32_firmware",
+    "files.exclude": {
+        "**/.agents": true,
+        "**/.codex": true,
+        "**/.git": true,
+        "**/.vs": true,
+        "**/AGENTS.md": true,
+        "**/pytest.ini": true,
+        "**/.pytest_cache": true,
+        "**/.venv": true,
+        "**/__pycache__": true,
+        "**/*.pyc": true,
+        "esp32_firmware/build": true,
+        "esp32_firmware/sdkconfig": true
+    },
+    "search.exclude": {
+        "**/.pytest_cache": true,
+        "**/.venv": true,
+        "**/__pycache__": true,
+        "esp32_firmware/build": true
+    },
+    "files.watcherExclude": {
+        "**/.venv/**": true,
+        "**/__pycache__/**": true,
+        "**/esp32_firmware/build/**": true
+    }
+}

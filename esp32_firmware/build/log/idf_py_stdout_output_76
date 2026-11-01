@@ -1,0 +1,218 @@
+Command: make -j 10 all
+-- Minimal build - OFF
+-- git rev-parse returned 'fatal: not a git repository (or any of the parent directories): .git'
+-- Could not use 'git describe' to determine PROJECT_VER.
+-- Building ESP-IDF components for target esp32
+-- KCONFIG_REPORT_VERBOSITY not set, using default
+-- Project sdkconfig file /home/lecongcomputer/esp32_right_hand_tracker/esp32_firmware/sdkconfig
+-- Compiler supported targets: xtensa-esp-elf
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- App "hand_tracker_firmware" version: 1
+-- Setting up mbedtls configuration
+-- Linkage type is PUBLIC
+-- Adding linker script /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_system/ld/esp32/memory.ld.in
+--   -> Preprocessing .in script: /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_system/ld/esp32/memory.ld.in
+-- Adding linker script /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_system/ld/esp32/sections.ld.in
+--   -> Preprocessing .in script: /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_system/ld/esp32/sections.ld.in
+--   -> Applying ldgen processing: /home/lecongcomputer/esp32_right_hand_tracker/esp32_firmware/build/esp-idf/esp_system/ld/sections.ld.in
+-- Adding linker script /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_rom/esp32/ld/esp32.rom.ld
+-- Adding linker script /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_rom/esp32/ld/esp32.rom.api.ld
+-- Adding linker script /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_rom/esp32/ld/esp32.rom.libgcc.ld
+-- Adding linker script /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_rom/esp32/ld/esp32.rom.libc-funcs.ld
+-- Adding linker script /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/soc/esp32/ld/esp32.peripherals.ld
+-- Adding linker script /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_hal_regi2c/esp32/rom.regi2c.ld
+-- Component idf::esp_trace will be linked with -Wl,--whole-archive
+-- Components: app_trace app_update bootloader bootloader_support bt cmock console cxx driver efuse esp-tls esp_adc esp_app_format esp_asrc_adapter esp_blockdev esp_blockdev_util esp_bootloader_format esp_coex esp_common esp_driver_ana_cmpr esp_driver_bitscrambler esp_driver_cam esp_driver_cordic esp_driver_dac esp_driver_dma esp_driver_gpio esp_driver_gptimer esp_driver_i2c esp_driver_i2s esp_driver_i3c esp_driver_isp esp_driver_jpeg esp_driver_ledc esp_driver_mcpwm esp_driver_parlio esp_driver_pcnt esp_driver_ppa esp_driver_rmt esp_driver_sd_intf esp_driver_sdio esp_driver_sdm esp_driver_sdmmc esp_driver_sdspi esp_driver_spi esp_driver_touch_sens esp_driver_tsens esp_driver_twai esp_driver_uart esp_driver_usb_serial_jtag esp_eth esp_event esp_gdbstub esp_hal_ana_cmpr esp_hal_ana_conv esp_hal_asrc esp_hal_cam esp_hal_clock esp_hal_cordic esp_hal_dma esp_hal_emac esp_hal_gpio esp_hal_gpspi esp_hal_i2c esp_hal_i2s esp_hal_i3c esp_hal_ieee802154 esp_hal_jpeg esp_hal_lcd esp_hal_ledc esp_hal_mcpwm esp_hal_mspi esp_hal_parlio esp_hal_pcnt esp_hal_pmu esp_hal_ppa esp_hal_regi2c esp_hal_rmt esp_hal_rtc_timer esp_hal_sd esp_hal_security esp_hal_systimer esp_hal_timg esp_hal_touch_sens esp_hal_twai esp_hal_uart esp_hal_usb esp_hal_wdt esp_hid esp_http_client esp_http_server esp_https_ota esp_https_server esp_hw_support esp_lcd esp_libc esp_local_ctrl esp_mm esp_netif esp_netif_stack esp_partition esp_phy esp_pm esp_psram esp_ringbuf esp_rom esp_security esp_stdio esp_system esp_timer esp_trace esp_usb_cdc_rom_console esp_wifi espcoredump esptool_py fatfs freertos hal heap http_parser ieee802154 log lwip main mbedtls nvs_flash nvs_sec_provider openthread partition_table perfmon protobuf-c protocomm pthread rt sdmmc soc spi_flash spiffs tcp_transport ulp unity vfs wear_levelling wpa_supplicant xtensa
+-- Component paths: /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/app_trace /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/app_update /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/bootloader /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/bootloader_support /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/bt /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/cmock /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/console /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/cxx /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/driver /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/efuse /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp-tls /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_adc /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_app_format /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_asrc_adapter /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_blockdev /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_blockdev_util /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_bootloader_format /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_coex /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_common /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_driver_ana_cmpr /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_driver_bitscrambler /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_driver_cam /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_driver_cordic /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_driver_dac /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_driver_dma /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_driver_gpio /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_driver_gptimer /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_driver_i2c /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_driver_i2s /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_driver_i3c /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_driver_isp /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_driver_jpeg /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_driver_ledc /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_driver_mcpwm /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_driver_parlio /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_driver_pcnt /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_driver_ppa /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_driver_rmt /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_driver_sd_intf /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_driver_sdio /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_driver_sdm /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_driver_sdmmc /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_driver_sdspi /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_driver_spi /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_driver_touch_sens /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_driver_tsens /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_driver_twai /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_driver_uart /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_driver_usb_serial_jtag /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_eth /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_event /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_gdbstub /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_hal_ana_cmpr /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_hal_ana_conv /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_hal_asrc /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_hal_cam /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_hal_clock /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_hal_cordic /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_hal_dma /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_hal_emac /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_hal_gpio /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_hal_gpspi /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_hal_i2c /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_hal_i2s /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_hal_i3c /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_hal_ieee802154 /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_hal_jpeg /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_hal_lcd /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_hal_ledc /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_hal_mcpwm /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_hal_mspi /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_hal_parlio /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_hal_pcnt /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_hal_pmu /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_hal_ppa /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_hal_regi2c /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_hal_rmt /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_hal_rtc_timer /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_hal_sd /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_hal_security /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_hal_systimer /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_hal_timg /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_hal_touch_sens /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_hal_twai /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_hal_uart /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_hal_usb /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_hal_wdt /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_hid /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_http_client /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_http_server /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_https_ota /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_https_server /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_hw_support /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_lcd /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_libc /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_local_ctrl /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_mm /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_netif /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_netif_stack /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_partition /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_phy /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_pm /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_psram /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_ringbuf /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_rom /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_security /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_stdio /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_system /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_timer /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_trace /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_usb_cdc_rom_console /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_wifi /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/espcoredump /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esptool_py /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/fatfs /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/freertos /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/hal /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/heap /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/http_parser /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/ieee802154 /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/log /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/lwip /home/lecongcomputer/esp32_right_hand_tracker/esp32_firmware/main /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/mbedtls /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/nvs_flash /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/nvs_sec_provider /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/openthread /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/partition_table /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/perfmon /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/protobuf-c /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/protocomm /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/pthread /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/rt /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/sdmmc /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/soc /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/spi_flash /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/spiffs /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/tcp_transport /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/ulp /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/unity /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/vfs /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/wear_levelling /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/wpa_supplicant /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/xtensa
+-- Configuring done (6.5s)
+-- Generating done (0.7s)
+-- Build files have been written to: /home/lecongcomputer/esp32_right_hand_tracker/esp32_firmware/build
+[  0%] Built target sections_ld_in_preprocess
+[  0%] Built target custom_bundle
+[  0%] Built target _project_elf_src
+[  0%] Built target partition_table_bin
+[  0%] Built target memory_ld_in_preprocess
+[  1%] Performing build step for 'bootloader'
+[  1%] Built target __idf_esp_https_ota
+[  2%] Built target __idf_esp_http_server
+[  6%] Built target __idf_log
+[  8%] Built target bootloader_memory_ld_in_preprocess
+[  8%] Built target _project_elf_src
+[  9%] Built target bootloader_sections_ld_in_preprocess
+[  2%] Built target __idf_esp_http_client
+[ 15%] Built target __idf_esp_rom
+[ 16%] Built target __idf_esp_common
+[  3%] Built target __idf_tcp_transport
+[ 24%] Built target __idf_esp_hw_support
+[  4%] Built target __idf_esp_adc
+[ 25%] Built target __idf_esp_system
+[  5%] Built target __idf_esp_driver_i2s
+[ 30%] Built target __idf_efuse
+[  6%] Built target __idf_esp-tls
+[ 47%] Built target __idf_bootloader_support
+[  6%] Built target __idf_http_parser
+[ 51%] Built target __idf_esp_security
+[  6%] Built target __idf_esp_hal_i2c
+[ 52%] Built target __idf_esp_hal_security
+[  6%] Built target __idf_esp_gdbstub
+[ 56%] Built target __idf_esp_hal_ana_conv
+[ 58%] Built target __idf_esp_hal_i2s
+[  8%] Built target __idf_esp_wifi
+[ 60%] Built target __idf_esp_hal_wdt
+[  9%] Built target __idf_esp_coex
+[ 62%] Built target __idf_esp_hal_timg
+[ 63%] Built target __idf_micro-ecc
+[ 65%] Built target __idf_esp_bootloader_format
+[ 66%] Built target __idf_spi_flash
+[ 68%] Built target __idf_esp_hal_mspi
+[ 18%] Built target __idf_wpa_supplicant
+[ 70%] Built target __idf_esp_hal_clock
+[ 19%] Built target __idf_esp_netif
+[ 74%] Built target __idf_esp_hal_gpspi
+[ 77%] Built target __idf_esp_hal_uart
+[ 78%] Built target __idf_esp_hal_pmu
+[ 82%] Built target __idf_esp_hal_gpio
+[ 87%] Built target __idf_hal
+[ 28%] Built target __idf_lwip
+[ 93%] Built target __idf_soc
+[ 28%] Built target __idf_vfs
+[ 95%] Built target __idf_xtensa
+[ 97%] Built target __idf_main
+[ 28%] Built target __idf_esp_phy
+[ 98%] Built target bootloader.elf
+[100%] Built target gen_bootloader_binary
+[ 30%] Built target __idf_nvs_flash
+[100%] Built target gen_project_binary
+[ 30%] Built target __idf_nvs_sec_provider
+[ 31%] Built target __idf_esp_event
+Bootloader binary size 0x6640 bytes. 0x9c0 bytes (9%) free.
+[ 32%] Built target __idf_esp_driver_uart
+[100%] Built target bootloader_check_size
+[ 32%] Built target __idf_esp_psram
+[100%] Built target app
+[ 32%] Built target __idf_esp_ringbuf
+[ 32%] No install step for 'bootloader'
+[ 32%] Completed 'bootloader'
+[ 33%] Built target __idf_esp_timer
+[ 33%] Built target __idf_cxx
+[ 33%] Built target bootloader
+[ 34%] Built target __idf_pthread
+[ 36%] Built target __idf_esp_libc
+[ 37%] Built target __idf_freertos
+[ 42%] Built target __idf_esp_hw_support
+[ 42%] Built target __idf_esp_hal_touch_sens
+[ 42%] Built target __idf_esp_hal_pmu
+[ 42%] Built target __idf_esp_hal_gpio
+[ 43%] Built target __idf_soc
+[ 44%] Built target __idf_heap
+[ 45%] Built target __idf_log
+[ 46%] Built target __idf_hal
+[ 47%] Built target __idf_esp_rom
+[ 47%] Built target __idf_esp_common
+[ 50%] Built target __idf_esp_system
+[ 52%] Built target __idf_spi_flash
+[ 53%] Built target __idf_bootloader_support
+[ 54%] Built target __idf_esp_hal_ana_conv
+[ 54%] Built target __idf_esp_hal_i2s
+[ 54%] Built target __idf_esp_hal_wdt
+[ 55%] Built target __idf_esp_hal_timg
+[ 55%] Built target everest
+[ 56%] Built target p256-m
+[ 61%] Built target builtin
+[ 62%] Built target pqcp
+[ 63%] Built target extras
+[ 63%] Built target platform
+[ 64%] Built target utilities
+[ 67%] Built target tfpsacrypto
+[ 70%] Built target mbedtls
+[ 71%] Built target mbedx509
+[ 71%] Built target __idf_mbedtls
+[ 71%] Built target __idf_esp_driver_dma
+[ 71%] Built target __idf_esp_mm
+[ 72%] Built target __idf_esp_pm
+[ 72%] Built target __idf_esp_hal_uart
+[ 72%] Built target __idf_esp_driver_gpio
+[ 72%] Built target __idf_esp_security
+[ 73%] Built target __idf_efuse
+[ 74%] Built target __idf_esp_partition
+[ 74%] Built target __idf_app_update
+[ 74%] Built target __idf_esp_bootloader_format
+[ 74%] Built target __idf_esp_app_format
+[ 74%] Built target __idf_esp_hal_security
+[ 75%] Built target __idf_esp_hal_mspi
+[ 75%] Built target __idf_esp_hal_clock
+[ 76%] Built target __idf_esp_hal_gpspi
+[ 77%] Built target __idf_esp_stdio
+[ 77%] Built target __idf_xtensa
+[ 77%] Built target __idf_esp_driver_cam
+[ 77%] Built target __idf_esp_hal_ledc
+[ 78%] Built target __idf_esp_hal_twai
+[ 79%] Built target __idf_esp_driver_gptimer
+[ 80%] Built target __idf_esp_driver_spi
+[ 80%] Built target __idf_esp_driver_i2c
+[ 81%] Built target __idf_esp_blockdev_util
+[ 82%] Built target __idf_console
+[ 83%] Built target __idf_unity
+[ 84%] Built target __idf_esp_driver_dac
+[ 84%] Built target __idf_esp_hal_mcpwm
+[ 84%] Built target __idf_esp_hal_pcnt
+[ 84%] Built target __idf_esp_driver_sdm
+[ 85%] Built target __idf_esp_hal_sd
+[ 85%] Built target __idf_esp_hal_rmt
+[ 86%] Built target __idf_esp_hal_emac
+[ 86%] Built target __idf_esp_driver_twai
+[ 87%] Built target __idf_esp_hal_lcd
+[ 87%] Built target __idf_esp_driver_touch_sens
+[ 88%] Built target __idf_esp_hid
+[ 88%] Built target __idf_esp_https_server
+[ 89%] Built target __idf_perfmon
+[ 89%] Built target __idf_spiffs
+[ 90%] Built target __idf_wear_levelling
+[ 90%] Built target __idf_protobuf-c
+[ 90%] Built target __idf_esp_driver_ledc
+[ 91%] Built target __idf_cmock
+[ 91%] Built target __idf_rt
+[ 91%] Built target __idf_driver
+[ 91%] Built target __idf_esp_driver_pcnt
+[ 92%] Built target __idf_esp_driver_mcpwm
+[ 93%] Built target __idf_sdmmc
+[ 94%] Built target __idf_esp_driver_rmt
+[ 94%] Building CXX object esp-idf/main/CMakeFiles/__idf_main.dir/main.cpp.obj
+[ 94%] Building CXX object esp-idf/main/CMakeFiles/__idf_main.dir/bno055.cpp.obj
+[ 94%] Building CXX object esp-idf/main/CMakeFiles/__idf_main.dir/uart_transport.cpp.obj
+[ 94%] Built target __idf_esp_driver_sdio
+[ 95%] Building CXX object esp-idf/main/CMakeFiles/__idf_main.dir/flex_adc.cpp.obj
+[ 95%] Built target __idf_esp_eth
+[ 97%] Built target __idf_protocomm
+[ 97%] Built target __idf_esp_lcd
+[ 97%] Built target __idf_esp_driver_sd_intf
+[ 97%] Built target __idf_esp_driver_sdspi
+[ 98%] Built target __idf_esp_local_ctrl
+[ 99%] Built target __idf_esp_driver_sdmmc
+[100%] Built target __idf_fatfs
+[100%] Linking C static library libmain.a
+[100%] Built target __idf_main
+[100%] Generating esp-idf/esp_system/ld/sections.ld
+Skipping linker fragment parsing, fragment files unchanged
+[100%] Built target __ldgen_output_sections.ld
+[100%] Building C object CMakeFiles/hand_tracker_firmware.elf.dir/project_elf_src_esp32.c.obj
+[100%] Linking CXX executable hand_tracker_firmware.elf
+[100%] Built target hand_tracker_firmware.elf
+[100%] Generating binary image from built executable
+esptool v5.4.0
+Creating ESP32 image...
+Merged 3 ELF sections.
+Successfully created ESP32 image.
+Generated /home/lecongcomputer/esp32_right_hand_tracker/esp32_firmware/build/hand_tracker_firmware.bin
+[100%] Built target gen_hand_tracker_firmware_binary
+[100%] Built target gen_project_binary
+hand_tracker_firmware.bin binary size 0x2e1d0 bytes. Smallest app partition is 0x100000 bytes. 0xd1e30 bytes (82%) free.
+[100%] Built target app_check_size
+[100%] Built target app

@@ -1,0 +1,2 @@
+source /home/lecongcomputer/esp32_right_hand_tracker/esp32_firmware/build/gdbinit/symbols
+source /home/lecongcomputer/esp32_right_hand_tracker/esp32_firmware/build/gdbinit/connect

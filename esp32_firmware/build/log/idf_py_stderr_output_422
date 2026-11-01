@@ -1,0 +1,30 @@
+Command: make -j 10 all
+CMake Warning at /home/lecongcomputer/ARM_Car/.tools/esp-idf/tools/cmake/git_submodules.cmake:52 (message):
+  Git submodule components/openthread/lib is out of date.  Run the following
+  command to fix: git submodule update --init --recursive
+Call Stack (most recent call first):
+  /home/lecongcomputer/ARM_Car/.tools/esp-idf/tools/cmake/build.cmake:158 (git_submodule_check)
+  /home/lecongcomputer/ARM_Car/.tools/esp-idf/tools/cmake/build.cmake:334 (__build_get_idf_git_revision)
+  /home/lecongcomputer/ARM_Car/.tools/esp-idf/tools/cmake/idf.cmake:62 (__build_init)
+  /home/lecongcomputer/ARM_Car/.tools/esp-idf/tools/cmake/project.cmake:124 (include)
+  CMakeLists.txt:81 (include)
+
+
+CMake Warning at /home/lecongcomputer/ARM_Car/.tools/esp-idf/tools/cmake/git_submodules.cmake:52 (message):
+  Git submodule components/openthread/openthread is out of date.  Run the
+  following command to fix: git submodule update --init --recursive
+Call Stack (most recent call first):
+  /home/lecongcomputer/ARM_Car/.tools/esp-idf/tools/cmake/build.cmake:158 (git_submodule_check)
+  /home/lecongcomputer/ARM_Car/.tools/esp-idf/tools/cmake/build.cmake:334 (__build_get_idf_git_revision)
+  /home/lecongcomputer/ARM_Car/.tools/esp-idf/tools/cmake/idf.cmake:62 (__build_init)
+  /home/lecongcomputer/ARM_Car/.tools/esp-idf/tools/cmake/project.cmake:124 (include)
+  CMakeLists.txt:81 (include)
+
+
+NOTE: Kconfig parser version: 1
+NOTE: Kconfig defaults policy: use sdkconfig
+NOTE: Status: Finished successfully
+NOTE: /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/bt/host/nimble/Kconfig.in:1428: BT_NIMBLE_MESH_PROVISIONER: 'default 0' is not a valid bool value (only 'y' and 'n' are allowed). Value is treated as 'n'.
+NOTE: /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/bt/controller/esp32/Kconfig.in:177: BTDM_CTRL_LEGACY_AUTH_VENDOR_EVT_EFF: 'default 0' is not a valid bool value (only 'y' and 'n' are allowed). Value is treated as 'n'.
+NOTE: /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/fatfs/Kconfig:240: FATFS_PRINT_LLI: 'default 0' is not a valid bool value (only 'y' and 'n' are allowed). Value is treated as 'n'.
+NOTE: /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/fatfs/Kconfig:245: FATFS_PRINT_FLOAT: 'default 0' is not a valid bool value (only 'y' and 'n' are allowed). Value is treated as 'n'.

@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.16)
+option(HAND_TRACKER_BLINK_TEST "Build firmware test LED GPIO12" OFF)
+option(HAND_TRACKER_I2C_SCANNER "Build firmware scan địa chỉ I2C" OFF)
+include($ENV{IDF_PATH}/tools/cmake/project.cmake)
+project(hand_tracker_firmware)

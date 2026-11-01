@@ -1,0 +1,13 @@
+# Target labels
+ bootloader
+# Source files and their labels
+/home/lecongcomputer/esp32_right_hand_tracker/esp32_firmware/build/CMakeFiles/bootloader
+/home/lecongcomputer/esp32_right_hand_tracker/esp32_firmware/build/CMakeFiles/bootloader.rule
+/home/lecongcomputer/esp32_right_hand_tracker/esp32_firmware/build/CMakeFiles/bootloader-complete.rule
+/home/lecongcomputer/esp32_right_hand_tracker/esp32_firmware/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
+/home/lecongcomputer/esp32_right_hand_tracker/esp32_firmware/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+/home/lecongcomputer/esp32_right_hand_tracker/esp32_firmware/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+/home/lecongcomputer/esp32_right_hand_tracker/esp32_firmware/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+/home/lecongcomputer/esp32_right_hand_tracker/esp32_firmware/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+/home/lecongcomputer/esp32_right_hand_tracker/esp32_firmware/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+/home/lecongcomputer/esp32_right_hand_tracker/esp32_firmware/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule

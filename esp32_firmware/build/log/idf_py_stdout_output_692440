@@ -1,0 +1,2915 @@
+Command: /home/lecongcomputer/ARM_Car/.tools/espressif/python_env/idf6.1_py3.12_env/bin/python /home/lecongcomputer/ARM_Car/.tools/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/lecongcomputer/esp32_right_hand_tracker/esp32_firmware/build/hand_tracker_firmware.elf /home/lecongcomputer/esp32_right_hand_tracker/esp32_firmware/build/bootloader/bootloader.elf -m '/home/lecongcomputer/ARM_Car/.tools/espressif/python_env/idf6.1_py3.12_env/bin/python' '/home/lecongcomputer/ARM_Car/.tools/esp-idf/tools/idf.py' '-p' '/dev/ttyUSB0'
+p32: �ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6272
+load:0x40078000,len:15824
+load:0x40080400,len:3988
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.1-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Oct 11 2026 12:16:37[0m
+[0;32mI (28) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (36) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (63) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (76) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b41ch ( 46108) map[0m
+[0;32mI (103) esp_image: segment 1: paddr=0001b444 vaddr=3ffb0000 size=02b78h ( 11128) load[0m
+[0;32mI (108) esp_image: segment 2: paddr=0001dfc4 vaddr=40080000 size=02054h (  8276) load[0m
+[0;32mI (111) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=142b8h ( 82616) map[0m
+[0;32mI (144) esp_image: segment 4: paddr=000342e0 vaddr=40082054 size=09e90h ( 40592) load[0m
+[0;32mI (161) esp_image: segment 5: paddr=0003e178 vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (167) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (167) boot: Disabling RNG early entropy source...[0m
+[0;33mW (189) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;33mW (191) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (219) i2c.common: GPIO 21 is not usable, maybe conflict with others[0m
+[0;33mW (220) i2c.common: GPIO 22 is not usable, maybe conflict with others[0m
+[1;31mE (223) i2c.master: I2C hardware timeout detected[0m
+[1;31mE (227) bno055: init(61): BNO055 not responding[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x108 (ESP_ERR_INVALID_RESPONSE) at 0x400d81ba
+file: "./main/main.cpp" line 21
+func: void app_main()
+expression: imu.init()
+
+abort() was called at PC 0x40086e53 on core 0
+
+
+Backtrace: 0x40086ef9:0x3ffb47b0 0x40086ec1:0x3ffb47d0 0x40086015:0x3ffb47f0 0x40086e53:0x3ffb4860 0x400d81ba:0x3ffb4890 0x400d4554:0x3ffb4900 0x400e1ff9:0x3ffb4930
+
+
+
+
+ELF file SHA256: 9841e375a
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6272
+load:0x40078000,len:15824
+load:0x40080400,len:3988
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.1-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Oct 11 2026 12:16:37[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (36) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (63) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (76) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b41ch ( 46108) map[0m
+[0;32mI (103) esp_image: segment 1: paddr=0001b444 vaddr=3ffb0000 size=02b78h ( 11128) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001dfc4 vaddr=40080000 size=02054h (  8276) load[0m
+[0;32mI (111) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=142b8h ( 82616) map[0m
+[0;32mI (144) esp_image: segment 4: paddr=000342e0 vaddr=40082054 size=09e90h ( 40592) load[0m
+[0;32mI (161) esp_image: segment 5: paddr=0003e178 vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (167) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (167) boot: Disabling RNG early entropy source...[0m
+[0;33mW (189) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;33mW (191) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x108 (ESP_ERR_INVALID_RESPONSE) at 0x400d81ba
+file: "./main/main.cpp" line 21
+func: void app_main()
+expression: imu.init()
+
+abort() was called at PC 0x40086e53 on core 0
+
+
+Backtrace: 0x40086ef9:0x3ffb47b0 0x40086ec1:0x3ffb47d0 0x40086015:0x3ffb47f0 0x40086e53:0x3ffb4860 0x400d81ba:0x3ffb4890 0x400d4554:0x3ffb4900 0x400e1ff9:0x3ffb4930
+
+
+
+
+ELF file SHA256: 9841e375a
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6272
+load:0x40078000,len:15824
+load:0x40080400,len:3988
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.1-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Oct 11 2026 12:16:37[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (36) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (63) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (76) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b41ch ( 46108) map[0m
+[0;32mI (103) esp_image: segment 1: paddr=0001b444 vaddr=3ffb0000 size=02b78h ( 11128) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001dfc4 vaddr=40080000 size=02054h (  8276) load[0m
+[0;32mI (111) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=142b8h ( 82616) map[0m
+[0;32mI (144) esp_image: segment 4: paddr=000342e0 vaddr=40082054 size=09e90h ( 40592) load[0m
+[0;32mI (161) esp_image: segment 5: paddr=0003e178 vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (167) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (167) boot: Disabling RNG early entropy source...[0m
+[0;33mW (189) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;33mW (191) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+Guru Meditation Error: Core  0 panic'ed (LoadProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x400df302  PS      : 0x00060233  A0      : 0x800dff50  A1      : 0x3ffb46c0  
+A2      : 0x3ffafc78  A3      : 0x000020cd  A4      : 0x3ffadba3  A5      : 0x000000a3  
+A6      : 0x3ffb562c  A7      : 0x9b0ec52b  A8      : 0x9b0ee5f8  A9      : 0x00000000  
+A10     : 0x00000001  A11     : 0x6001301c  A12     : 0x00013ffc  A13     : 0x3ffb5634  
+A14     : 0x00000035  A15     : 0x00060223  SAR     : 0x00000020  EXCCAUSE: 0x0000001c  
+EXCVADDR: 0x9b0ee5f8  LBEG    : 0x4000c46c  LEND    : 0x4000c477  LCOUNT  : 0xffffffff  
+
+
+Backtrace: 0x400df2ff:0x3ffb46c0 0x400dff4d:0x3ffb4700 0x400e01a0:0x3ffb4730 0x400e0253:0x3ffb4770 0x400e0e5a:0x3ffb4790 0x400d8395:0x3ffb4820 0x400d81aa:0x3ffb4890 0x400d4554:0x3ffb4900 0x400e1ff9:0x3ffb4930
+
+
+
+
+ELF file SHA256: 9841e375a
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6272
+load:0x40078000,len:15824
+load:0x40080400,len:3988
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.1-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Oct 11 2026 12:16:37[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (36) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (63) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (76) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b41ch ( 46108) map[0m
+[0;32mI (103) esp_image: segment 1: paddr=0001b444 vaddr=3ffb0000 size=02b78h ( 11128) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001dfc4 vaddr=40080000 size=02054h (  8276) load[0m
+[0;32mI (111) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=142b8h ( 82616) map[0m
+[0;32mI (144) esp_image: segment 4: paddr=000342e0 vaddr=40082054 size=09e90h ( 40592) load[0m
+[0;32mI (161) esp_image: segment 5: paddr=0003e178 vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (167) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (167) boot: Disabling RNG early entropy source...[0m
+[0;33mW (189) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;33mW (191) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x108 (ESP_ERR_INVALID_RESPONSE) at 0x400d81ba
+file: "./main/main.cpp" line 21
+func: void app_main()
+expression: imu.init()
+
+abort() was called at PC 0x40086e53 on core 0
+
+
+Backtrace: 0x40086ef9:0x3ffb47b0 0x40086ec1:0x3ffb47d0 0x40086015:0x3ffb47f0 0x40086e53:0x3ffb4860 0x400d81ba:0x3ffb4890 0x400d4554:0x3ffb4900 0x400e1ff9:0x3ffb4930
+
+
+
+
+ELF file SHA256: 9841e375a
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6272
+load:0x40078000,len:15824
+load:0x40080400,len:3988
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.1-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Oct 11 2026 12:16:37[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (36) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (63) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (76) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b41ch ( 46108) map[0m
+[0;32mI (103) esp_image: segment 1: paddr=0001b444 vaddr=3ffb0000 size=02b78h ( 11128) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001dfc4 vaddr=40080000 size=02054h (  8276) load[0m
+[0;32mI (111) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=142b8h ( 82616) map[0m
+[0;32mI (144) esp_image: segment 4: paddr=000342e0 vaddr=40082054 size=09e90h ( 40592) load[0m
+[0;32mI (161) esp_image: segment 5: paddr=0003e178 vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (167) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (167) boot: Disabling RNG early entropy source...[0m
+[0;33mW (189) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;33mW (191) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x108 (ESP_ERR_INVALID_RESPONSE) at 0x400d81ba
+file: "./main/main.cpp" line 21
+func: void app_main()
+expression: imu.init()
+
+abort() was called at PC 0x40086e53 on core 0
+
+
+Backtrace: 0x40086ef9:0x3ffb47b0 0x40086ec1:0x3ffb47d0 0x40086015:0x3ffb47f0 0x40086e53:0x3ffb4860 0x400d81ba:0x3ffb4890 0x400d4554:0x3ffb4900 0x400e1ff9:0x3ffb4930
+
+
+
+
+ELF file SHA256: 9841e375a
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6272
+load:0x40078000,len:15824
+load:0x40080400,len:3988
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.1-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Oct 11 2026 12:16:37[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (36) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (63) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (76) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b41ch ( 46108) map[0m
+[0;32mI (103) esp_image: segment 1: paddr=0001b444 vaddr=3ffb0000 size=02b78h ( 11128) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001dfc4 vaddr=40080000 size=02054h (  8276) load[0m
+[0;32mI (111) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=142b8h ( 82616) map[0m
+[0;32mI (144) esp_image: segment 4: paddr=000342e0 vaddr=40082054 size=09e90h ( 40592) load[0m
+[0;32mI (161) esp_image: segment 5: paddr=0003e178 vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (167) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (167) boot: Disabling RNG early entropy source...[0m
+[0;33mW (189) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;33mW (191) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x108 (ESP_ERR_INVALID_RESPONSE) at 0x400d81ba
+file: "./main/main.cpp" line 21
+func: void app_main()
+expression: imu.init()
+
+abort() was called at PC 0x40086e53 on core 0
+
+
+Backtrace: 0x40086ef9:0x3ffb47b0 0x40086ec1:0x3ffb47d0 0x40086015:0x3ffb47f0 0x40086e53:0x3ffb4860 0x400d81ba:0x3ffb4890 0x400d4554:0x3ffb4900 0x400e1ff9:0x3ffb4930
+
+
+
+
+ELF file SHA256: 9841e375a
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6272
+load:0x40078000,len:15824
+load:0x40080400,len:3988
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.1-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Oct 11 2026 12:16:37[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (36) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (63) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (76) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b41ch ( 46108) map[0m
+[0;32mI (103) esp_image: segment 1: paddr=0001b444 vaddr=3ffb0000 size=02b78h ( 11128) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001dfc4 vaddr=40080000 size=02054h (  8276) load[0m
+[0;32mI (111) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=142b8h ( 82616) map[0m
+[0;32mI (144) esp_image: segment 4: paddr=000342e0 vaddr=40082054 size=09e90h ( 40592) load[0m
+[0;32mI (161) esp_image: segment 5: paddr=0003e178 vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (167) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (167) boot: Disabling RNG early entropy source...[0m
+[0;33mW (189) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;33mW (191) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (222) i2c.common: GPIO 21 is not usable, maybe conflict with others[0m
+[0;33mW (222) i2c.common: GPIO 22 is not usable, maybe conflict with others[0m
+[1;31mE (224) i2c.master: I2C hardware timeout detected[0m
+[1;31mE (228) bno055: init(61): BNO055 not responding[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x108 (ESP_ERR_INVALID_RESPONSE) at 0x400d81ba
+file: "./main/main.cpp" line 21
+func: void app_main()
+expression: imu.init()
+
+abort() was called at PC 0x40086e53 on core 0
+
+
+Backtrace: 0x40086ef9:0x3ffb47b0 0x40086ec1:0x3ffb47d0 0x40086015:0x3ffb47f0 0x40086e53:0x3ffb4860 0x400d81ba:0x3ffb4890 0x400d4554:0x3ffb4900 0x400e1ff9:0x3ffb4930
+
+
+
+
+ELF file SHA256: 9841e375a
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6272
+load:0x40078000,len:15824
+load:0x40080400,len:3988
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.1-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Oct 11 2026 12:16:37[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (36) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (63) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (76) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b41ch ( 46108) map[0m
+[0;32mI (103) esp_image: segment 1: paddr=0001b444 vaddr=3ffb0000 size=02b78h ( 11128) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001dfc4 vaddr=40080000 size=02054h (  8276) load[0m
+[0;32mI (111) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=142b8h ( 82616) map[0m
+[0;32mI (144) esp_image: segment 4: paddr=000342e0 vaddr=40082054 size=09e90h ( 40592) load[0m
+[0;32mI (161) esp_image: segment 5: paddr=0003e178 vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (167) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (167) boot: Disabling RNG early entropy source...[0m
+[0;33mW (189) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;33mW (191) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x108 (ESP_ERR_INVALID_RESPONSE) at 0x400d81ba
+file: "./main/main.cpp" line 21
+func: void app_main()
+expression: imu.init()
+
+abort() was called at PC 0x40086e53 on core 0
+
+
+Backtrace: 0x40086ef9:0x3ffb47b0 0x40086ec1:0x3ffb47d0 0x40086015:0x3ffb47f0 0x40086e53:0x3ffb4860 0x400d81ba:0x3ffb4890 0x400d4554:0x3ffb4900 0x400e1ff9:0x3ffb4930
+
+
+
+
+ELF file SHA256: 9841e375a
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6272
+load:0x40078000,len:15824
+load:0x40080400,len:3988
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.1-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Oct 11 2026 12:16:37[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (36) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (63) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (76) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b41ch ( 46108) map[0m
+[0;32mI (103) esp_image: segment 1: paddr=0001b444 vaddr=3ffb0000 size=02b78h ( 11128) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001dfc4 vaddr=40080000 size=02054h (  8276) load[0m
+[0;32mI (111) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=142b8h ( 82616) map[0m
+[0;32mI (144) esp_image: segment 4: paddr=000342e0 vaddr=40082054 size=09e90h ( 40592) load[0m
+[0;32mI (161) esp_image: segment 5: paddr=0003e178 vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (167) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (167) boot: Disabling RNG early entropy source...[0m
+[0;33mW (189) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;33mW (191) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x108 (ESP_ERR_INVALID_RESPONSE) at 0x400d81ba
+file: "./main/main.cpp" line 21
+func: void app_main()
+expression: imu.init()
+
+abort() was called at PC 0x40086e53 on core 0
+
+
+Backtrace: 0x40086ef9:0x3ffb47b0 0x40086ec1:0x3ffb47d0 0x40086015:0x3ffb47f0 0x40086e53:0x3ffb4860 0x400d81ba:0x3ffb4890 0x400d4554:0x3ffb4900 0x400e1ff9:0x3ffb4930
+
+
+
+
+ELF file SHA256: 9841e375a
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6272
+load:0x40078000,len:15824
+load:0x40080400,len:3988
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.1-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Oct 11 2026 12:16:37[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (36) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (63) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (76) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b41ch ( 46108) map[0m
+[0;32mI (103) esp_image: segment 1: paddr=0001b444 vaddr=3ffb0000 size=02b78h ( 11128) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001dfc4 vaddr=40080000 size=02054h (  8276) load[0m
+[0;32mI (111) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=142b8h ( 82616) map[0m
+[0;32mI (144) esp_image: segment 4: paddr=000342e0 vaddr=40082054 size=09e90h ( 40592) load[0m
+[0;32mI (161) esp_image: segment 5: paddr=0003e178 vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (167) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (167) boot: Disabling RNG early entropy source...[0m
+[0;33mW (189) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;33mW (191) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x108 (ESP_ERR_INVALID_RESPONSE) at 0x400d81ba
+file: "./main/main.cpp" line 21
+func: void app_main()
+expression: imu.init()
+
+abort() was called at PC 0x40086e53 on core 0
+
+
+Backtrace: 0x40086ef9:0x3ffb47b0 0x40086ec1:0x3ffb47d0 0x40086015:0x3ffb47f0 0x40086e53:0x3ffb4860 0x400d81ba:0x3ffb4890 0x400d4554:0x3ffb4900 0x400e1ff9:0x3ffb4930
+
+
+
+
+ELF file SHA256: 9841e375a
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6272
+load:0x40078000,len:15824
+load:0x40080400,len:3988
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.1-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Oct 11 2026 12:16:37[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (36) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (63) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (76) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b41ch ( 46108) map[0m
+[0;32mI (103) esp_image: segment 1: paddr=0001b444 vaddr=3ffb0000 size=02b78h ( 11128) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001dfc4 vaddr=40080000 size=02054h (  8276) load[0m
+[0;32mI (111) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=142b8h ( 82616) map[0m
+[0;32mI (144) esp_image: segment 4: paddr=000342e0 vaddr=40082054 size=09e90h ( 40592) load[0m
+[0;32mI (161) esp_image: segment 5: paddr=0003e178 vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (167) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (167) boot: Disabling RNG early entropy source...[0m
+[0;33mW (189) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;33mW (191) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[1;31mE (418) i2c.master: I2C bus is still busy but software timeout detected[0m
+[0;33mW (418) i2c.common: GPIO 21 is not usable, maybe conflict with others[0m
+[0;33mW (419) i2c.common: GPIO 22 is not usable, maybe conflict with others[0m
+[1;31mE (426) bno055: init(61): BNO055 not responding[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x108 (ESP_ERR_INVALID_RESPONSE) at 0x400d81ba
+file: "./main/main.cpp" line 21
+func: void app_main()
+expression: imu.init()
+
+abort() was called at PC 0x40086e53 on core 0
+
+
+Backtrace: 0x40086ef9:0x3ffb47b0 0x40086ec1:0x3ffb47d0 0x40086015:0x3ffb47f0 0x40086e53:0x3ffb4860 0x400d81ba:0x3ffb4890 0x400d4554:0x3ffb4900 0x400e1ff9:0x3ffb4930
+
+
+
+
+ELF file SHA256: 9841e375a
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6272
+load:0x40078000,len:15824
+load:0x40080400,len:3988
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.1-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Oct 11 2026 12:16:37[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (36) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (63) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (76) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b41ch ( 46108) map[0m
+[0;32mI (103) esp_image: segment 1: paddr=0001b444 vaddr=3ffb0000 size=02b78h ( 11128) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001dfc4 vaddr=40080000 size=02054h (  8276) load[0m
+[0;32mI (111) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=142b8h ( 82616) map[0m
+[0;32mI (144) esp_image: segment 4: paddr=000342e0 vaddr=40082054 size=09e90h ( 40592) load[0m
+[0;32mI (161) esp_image: segment 5: paddr=0003e178 vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (167) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (167) boot: Disabling RNG early entropy source...[0m
+[0;33mW (189) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;33mW (191) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[1;31mE (418) i2c.master: I2C bus is still busy but software timeout detected[0m
+[0;33mW (418) i2c.common: GPIO 21 is not usable, maybe conflict with others[0m
+[0;33mW (419) i2c.common: GPIO 22 is not usable, maybe conflict with others[0m
+[1;31mE (426) bno055: init(61): BNO055 not responding[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x108 (ESP_ERR_INVALID_RESPONSE) at 0x400d81ba
+file: "./main/main.cpp" line 21
+func: void app_main()
+expression: imu.init()
+
+abort() was called at PC 0x40086e53 on core 0
+
+
+Backtrace: 0x40086ef9:0x3ffb47b0 0x40086ec1:0x3ffb47d0 0x40086015:0x3ffb47f0 0x40086e53:0x3ffb4860 0x400d81ba:0x3ffb4890 0x400d4554:0x3ffb4900 0x400e1ff9:0x3ffb4930
+
+
+
+
+ELF file SHA256: 9841e375a
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6272
+load:0x40078000,len:15824
+load:0x40080400,len:3988
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.1-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Oct 11 2026 12:16:37[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (36) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (63) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (76) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b41ch ( 46108) map[0m
+[0;32mI (103) esp_image: segment 1: paddr=0001b444 vaddr=3ffb0000 size=02b78h ( 11128) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001dfc4 vaddr=40080000 size=02054h (  8276) load[0m
+[0;32mI (111) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=142b8h ( 82616) map[0m
+[0;32mI (144) esp_image: segment 4: paddr=000342e0 vaddr=40082054 size=09e90h ( 40592) load[0m
+[0;32mI (161) esp_image: segment 5: paddr=0003e178 vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (167) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (167) boot: Disabling RNG early entropy source...[0m
+[0;33mW (189) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;33mW (191) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[1;31mE (217) bno055: init(61): BNO055 not responding[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x108 (ESP_ERR_INVALID_RESPONSE) at 0x400d81ba
+file: "./main/main.cpp" line 21
+func: void app_main()
+expression: imu.init()
+
+abort() was called at PC 0x40086e53 on core 0
+
+
+Backtrace: 0x40086ef9:0x3ffb47b0 0x40086ec1:0x3ffb47d0 0x40086015:0x3ffb47f0 0x40086e53:0x3ffb4860 0x400d81ba:0x3ffb4890 0x400d4554:0x3ffb4900 0x400e1ff9:0x3ffb4930
+
+
+
+
+ELF file SHA256: 9841e375a
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6272
+load:0x40078000,len:15824
+load:0x40080400,len:3988
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.1-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Oct 11 2026 12:16:37[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (36) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (63) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (76) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b41ch ( 46108) map[0m
+[0;32mI (103) esp_image: segment 1: paddr=0001b444 vaddr=3ffb0000 size=02b78h ( 11128) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001dfc4 vaddr=40080000 size=02054h (  8276) load[0m
+[0;32mI (111) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=142b8h ( 82616) map[0m
+[0;32mI (144) esp_image: segment 4: paddr=000342e0 vaddr=40082054 size=09e90h ( 40592) load[0m
+[0;32mI (161) esp_image: segment 5: paddr=0003e178 vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (167) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (167) boot: Disabling RNG early entropy source...[0m
+[0;33mW (189) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;33mW (191) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x108 (ESP_ERR_INVALID_RESPONSE) at 0x400d81ba
+file: "./main/main.cpp" line 21
+func: void app_main()
+expression: imu.init()
+
+abort() was called at PC 0x40086e53 on core 0
+
+
+Backtrace: 0x40086ef9:0x3ffb47b0 0x40086ec1:0x3ffb47d0 0x40086015:0x3ffb47f0 0x40086e53:0x3ffb4860 0x400d81ba:0x3ffb4890 0x400d4554:0x3ffb4900 0x400e1ff9:0x3ffb4930
+
+
+
+
+ELF file SHA256: 9841e375a
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6272
+load:0x40078000,len:15824
+load:0x40080400,len:3988
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.1-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Oct 11 2026 12:16:37[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (36) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (63) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (76) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b41ch ( 46108) map[0m
+[0;32mI (103) esp_image: segment 1: paddr=0001b444 vaddr=3ffb0000 size=02b78h ( 11128) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001dfc4 vaddr=40080000 size=02054h (  8276) load[0m
+[0;32mI (111) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=142b8h ( 82616) map[0m
+[0;32mI (144) esp_image: segment 4: paddr=000342e0 vaddr=40082054 size=09e90h ( 40592) load[0m
+[0;32mI (161) esp_image: segment 5: paddr=0003e178 vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (167) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (167) boot: Disabling RNG early entropy source...[0m
+[0;33mW (189) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;33mW (191) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x108 (ESP_ERR_INVALID_RESPONSE) at 0x400d81ba
+file: "./main/main.cpp" line 21
+func: void app_main()
+expression: imu.init()
+
+abort() was called at PC 0x40086e53 on core 0
+
+
+Backtrace: 0x40086ef9:0x3ffb47b0 0x40086ec1:0x3ffb47d0 0x40086015:0x3ffb47f0 0x40086e53:0x3ffb4860 0x400d81ba:0x3ffb4890 0x400d4554:0x3ffb4900 0x400e1ff9:0x3ffb4930
+
+
+
+
+ELF file SHA256: 9841e375a
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6272
+load:0x40078000,len:15824
+load:0x40080400,len:3988
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.1-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Oct 11 2026 12:16:37[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (36) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (63) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (76) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b41ch ( 46108) map[0m
+[0;32mI (103) esp_image: segment 1: paddr=0001b444 vaddr=3ffb0000 size=02b78h ( 11128) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001dfc4 vaddr=40080000 size=02054h (  8276) load[0m
+[0;32mI (111) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=142b8h ( 82616) map[0m
+[0;32mI (144) esp_image: segment 4: paddr=000342e0 vaddr=40082054 size=09e90h ( 40592) load[0m
+[0;32mI (161) esp_image: segment 5: paddr=0003e178 vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (167) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (167) boot: Disabling RNG early entropy source...[0m
+[0;33mW (189) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;33mW (191) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[1;31mE (418) i2c.master: I2C bus is still busy but software timeout detected[0m
+[0;33mW (418) i2c.common: GPIO 21 is not usable, maybe conflict with others[0m
+[0;33mW (419) i2c.common: GPIO 22 is not usable, maybe conflict with others[0m
+[1;31mE (426) bno055: init(61): BNO055 not responding[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x108 (ESP_ERR_INVALID_RESPONSE) at 0x400d81ba
+file: "./main/main.cpp" line 21
+func: void app_main()
+expression: imu.init()
+
+abort() was called at PC 0x40086e53 on core 0
+
+
+Backtrace: 0x40086ef9:0x3ffb47b0 0x40086ec1:0x3ffb47d0 0x40086015:0x3ffb47f0 0x40086e53:0x3ffb4860 0x400d81ba:0x3ffb4890 0x400d4554:0x3ffb4900 0x400e1ff9:0x3ffb4930
+
+
+
+
+ELF file SHA256: 9841e375a
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6272
+load:0x40078000,len:15824
+load:0x40080400,len:3988
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.1-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Oct 11 2026 12:16:37[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (36) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (63) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (76) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b41ch ( 46108) map[0m
+[0;32mI (103) esp_image: segment 1: paddr=0001b444 vaddr=3ffb0000 size=02b78h ( 11128) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001dfc4 vaddr=40080000 size=02054h (  8276) load[0m
+[0;32mI (111) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=142b8h ( 82616) map[0m
+[0;32mI (144) esp_image: segment 4: paddr=000342e0 vaddr=40082054 size=09e90h ( 40592) load[0m
+[0;32mI (161) esp_image: segment 5: paddr=0003e178 vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (167) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (167) boot: Disabling RNG early entropy source...[0m
+[0;33mW (189) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;33mW (191) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (219) i2c.common: GPIO 21 is not usable, maybe conflict with others[0m
+[0;33mW (220) i2c.common: GPIO 22 is not usable, maybe conflict with others[0m
+[1;31mE (223) i2c.master: I2C hardware timeout detected[0m
+[1;31mE (227) bno055: init(61): BNO055 not responding[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x108 (ESP_ERR_INVALID_RESPONSE) at 0x400d81ba
+file: "./main/main.cpp" line 21
+func: void app_main()
+expression: imu.init()
+
+abort() was called at PC 0x40086e53 on core 0
+
+
+Backtrace: 0x40086ef9:0x3ffb47b0 0x40086ec1:0x3ffb47d0 0x40086015:0x3ffb47f0 0x40086e53:0x3ffb4860 0x400d81ba:0x3ffb4890 0x400d4554:0x3ffb4900 0x400e1ff9:0x3ffb4930
+
+
+
+
+ELF file SHA256: 9841e375a
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6272
+load:0x40078000,len:15824
+load:0x40080400,len:3988
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.1-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Oct 11 2026 12:16:37[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (36) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (63) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (76) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b41ch ( 46108) map[0m
+[0;32mI (103) esp_image: segment 1: paddr=0001b444 vaddr=3ffb0000 size=02b78h ( 11128) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001dfc4 vaddr=40080000 size=02054h (  8276) load[0m
+[0;32mI (111) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=142b8h ( 82616) map[0m
+[0;32mI (144) esp_image: segment 4: paddr=000342e0 vaddr=40082054 size=09e90h ( 40592) load[0m
+[0;32mI (161) esp_image: segment 5: paddr=0003e178 vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (167) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (167) boot: Disabling RNG early entropy source...[0m
+[0;33mW (189) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;33mW (191) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x108 (ESP_ERR_INVALID_RESPONSE) at 0x400d81ba
+file: "./main/main.cpp" line 21
+func: void app_main()
+expression: imu.init()
+
+abort() was called at PC 0x40086e53 on core 0
+
+
+Backtrace: 0x40086ef9:0x3ffb47b0 0x40086ec1:0x3ffb47d0 0x40086015:0x3ffb47f0 0x40086e53:0x3ffb4860 0x400d81ba:0x3ffb4890 0x400d4554:0x3ffb4900 0x400e1ff9:0x3ffb4930
+
+
+
+
+ELF file SHA256: 9841e375a
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6272
+load:0x40078000,len:15824
+load:0x40080400,len:3988
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.1-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Oct 11 2026 12:16:37[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (36) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (63) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (76) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b41ch ( 46108) map[0m
+[0;32mI (103) esp_image: segment 1: paddr=0001b444 vaddr=3ffb0000 size=02b78h ( 11128) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001dfc4 vaddr=40080000 size=02054h (  8276) load[0m
+[0;32mI (111) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=142b8h ( 82616) map[0m
+[0;32mI (144) esp_image: segment 4: paddr=000342e0 vaddr=40082054 size=09e90h ( 40592) load[0m
+[0;32mI (161) esp_image: segment 5: paddr=0003e178 vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (167) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (167) boot: Disabling RNG early entropy source...[0m
+[0;33mW (189) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;33mW (191) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (219) i2c.common: GPIO 21 is not usable, maybe conflict with others[0m
+[0;33mW (220) i2c.common: GPIO 22 is not usable, maybe conflict with others[0m
+[1;31mE (223) i2c.master: I2C hardware timeout detected[0m
+[1;31mE (227) bno055: init(61): BNO055 not responding[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x108 (ESP_ERR_INVALID_RESPONSE) at 0x400d81ba
+file: "./main/main.cpp" line 21
+func: void app_main()
+expression: imu.init()
+
+abort() was called at PC 0x40086e53 on core 0
+
+
+Backtrace: 0x40086ef9:0x3ffb47b0 0x40086ec1:0x3ffb47d0 0x40086015:0x3ffb47f0 0x40086e53:0x3ffb4860 0x400d81ba:0x3ffb4890 0x400d4554:0x3ffb4900 0x400e1ff9:0x3ffb4930
+
+
+
+
+ELF file SHA256: 9841e375a
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6272
+load:0x40078000,len:15824
+load:0x40080400,len:3988
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.1-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Oct 11 2026 12:16:37[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (36) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (63) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (76) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b41ch ( 46108) map[0m
+[0;32mI (103) esp_image: segment 1: paddr=0001b444 vaddr=3ffb0000 size=02b78h ( 11128) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001dfc4 vaddr=40080000 size=02054h (  8276) load[0m
+[0;32mI (111) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=142b8h ( 82616) map[0m
+[0;32mI (144) esp_image: segment 4: paddr=000342e0 vaddr=40082054 size=09e90h ( 40592) load[0m
+[0;32mI (161) esp_image: segment 5: paddr=0003e178 vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (167) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (167) boot: Disabling RNG early entropy source...[0m
+[0;33mW (189) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;33mW (191) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x108 (ESP_ERR_INVALID_RESPONSE) at 0x400d81ba
+file: "./main/main.cpp" line 21
+func: void app_main()
+expression: imu.init()
+
+abort() was called at PC 0x40086e53 on core 0
+
+
+Backtrace: 0x40086ef9:0x3ffb47b0 0x40086ec1:0x3ffb47d0 0x40086015:0x3ffb47f0 0x40086e53:0x3ffb4860 0x400d81ba:0x3ffb4890 0x400d4554:0x3ffb4900 0x400e1ff9:0x3ffb4930
+
+
+
+
+ELF file SHA256: 9841e375a
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6272
+load:0x40078000,len:15824
+load:0x40080400,len:3988
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.1-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Oct 11 2026 12:16:37[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (36) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (63) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (76) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b41ch ( 46108) map[0m
+[0;32mI (103) esp_image: segment 1: paddr=0001b444 vaddr=3ffb0000 size=02b78h ( 11128) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001dfc4 vaddr=40080000 size=02054h (  8276) load[0m
+[0;32mI (111) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=142b8h ( 82616) map[0m
+[0;32mI (144) esp_image: segment 4: paddr=000342e0 vaddr=40082054 size=09e90h ( 40592) load[0m
+[0;32mI (161) esp_image: segment 5: paddr=0003e178 vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (167) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (167) boot: Disabling RNG early entropy source...[0m
+[0;33mW (189) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;33mW (191) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x108 (ESP_ERR_INVALID_RESPONSE) at 0x400d81ba
+file: "./main/main.cpp" line 21
+func: void app_main()
+expression: imu.init()
+
+abort() was called at PC 0x40086e53 on core 0
+
+
+Backtrace: 0x40086ef9:0x3ffb47b0 0x40086ec1:0x3ffb47d0 0x40086015:0x3ffb47f0 0x40086e53:0x3ffb4860 0x400d81ba:0x3ffb4890 0x400d4554:0x3ffb4900 0x400e1ff9:0x3ffb4930
+
+
+
+
+ELF file SHA256: 9841e375a
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6272
+load:0x40078000,len:15824
+load:0x40080400,len:3988
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.1-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Oct 11 2026 12:16:37[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (36) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (63) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (76) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b41ch ( 46108) map[0m
+[0;32mI (103) esp_image: segment 1: paddr=0001b444 vaddr=3ffb0000 size=02b78h ( 11128) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001dfc4 vaddr=40080000 size=02054h (  8276) load[0m
+[0;32mI (111) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=142b8h ( 82616) map[0m
+[0;32mI (144) esp_image: segment 4: paddr=000342e0 vaddr=40082054 size=09e90h ( 40592) load[0m
+[0;32mI (161) esp_image: segment 5: paddr=0003e178 vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (167) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (167) boot: Disabling RNG early entropy source...[0m
+[0;33mW (189) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;33mW (191) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (218) i2c.common: GPIO 21 is not usable, maybe conflict with others[0m
+[0;33mW (218) i2c.common: GPIO 22 is not usable, maybe conflict with others[0m
+[1;31mE (222) i2c.master: I2C hardware timeout detected[0m
+[1;31mE (226) bno055: init(61): BNO055 not responding[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x108 (ESP_ERR_INVALID_RESPONSE) at 0x400d81ba
+file: "./main/main.cpp" line 21
+func: void app_main()
+expression: imu.init()
+
+abort() was called at PC 0x40086e53 on core 0
+
+
+Backtrace: 0x40086ef9:0x3ffb47b0 0x40086ec1:0x3ffb47d0 0x40086015:0x3ffb47f0 0x40086e53:0x3ffb4860 0x400d81ba:0x3ffb4890 0x400d4554:0x3ffb4900 0x400e1ff9:0x3ffb4930
+
+
+
+
+ELF file SHA256: 9841e375a
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6272
+load:0x40078000,len:15824
+load:0x40080400,len:3988
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.1-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Oct 11 2026 12:16:37[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (36) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (63) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (76) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b41ch ( 46108) map[0m
+[0;32mI (103) esp_image: segment 1: paddr=0001b444 vaddr=3ffb0000 size=02b78h ( 11128) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001dfc4 vaddr=40080000 size=02054h (  8276) load[0m
+[0;32mI (111) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=142b8h ( 82616) map[0m
+[0;32mI (144) esp_image: segment 4: paddr=000342e0 vaddr=40082054 size=09e90h ( 40592) load[0m
+[0;32mI (161) esp_image: segment 5: paddr=0003e178 vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (167) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (167) boot: Disabling RNG early entropy source...[0m
+[0;33mW (189) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;33mW (191) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x108 (ESP_ERR_INVALID_RESPONSE) at 0x400d81ba
+file: "./main/main.cpp" line 21
+func: void app_main()
+expression: imu.init()
+
+abort() was called at PC 0x40086e53 on core 0
+
+
+Backtrace: 0x40086ef9:0x3ffb47b0 0x40086ec1:0x3ffb47d0 0x40086015:0x3ffb47f0 0x40086e53:0x3ffb4860 0x400d81ba:0x3ffb4890 0x400d4554:0x3ffb4900 0x400e1ff9:0x3ffb4930
+
+
+
+
+ELF file SHA256: 9841e375a
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6272
+load:0x40078000,len:15824
+load:0x40080400,len:3988
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.1-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Oct 11 2026 12:16:37[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (36) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (63) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (76) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b41ch ( 46108) map[0m
+[0;32mI (103) esp_image: segment 1: paddr=0001b444 vaddr=3ffb0000 size=02b78h ( 11128) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001dfc4 vaddr=40080000 size=02054h (  8276) load[0m
+[0;32mI (111) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=142b8h ( 82616) map[0m
+[0;32mI (144) esp_image: segment 4: paddr=000342e0 vaddr=40082054 size=09e90h ( 40592) load[0m
+[0;32mI (161) esp_image: segment 5: paddr=0003e178 vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (167) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (167) boot: Disabling RNG early entropy source...[0m
+[0;33mW (189) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;33mW (191) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[1;31mE (418) i2c.master: I2C bus is still busy but software timeout detected[0m
+[0;33mW (418) i2c.common: GPIO 21 is not usable, maybe conflict with others[0m
+[0;33mW (419) i2c.common: GPIO 22 is not usable, maybe conflict with others[0m
+[1;31mE (426) bno055: init(61): BNO055 not responding[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x108 (ESP_ERR_INVALID_RESPONSE) at 0x400d81ba
+file: "./main/main.cpp" line 21
+func: void app_main()
+expression: imu.init()
+
+abort() was called at PC 0x40086e53 on core 0
+
+
+Backtrace: 0x40086ef9:0x3ffb47b0 0x40086ec1:0x3ffb47d0 0x40086015:0x3ffb47f0 0x40086e53:0x3ffb4860 0x400d81ba:0x3ffb4890 0x400d4554:0x3ffb4900 0x400e1ff9:0x3ffb4930
+
+
+
+
+ELF file SHA256: 9841e375a
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6272
+load:0x40078000,len:15824
+load:0x40080400,len:3988
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.1-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Oct 11 2026 12:16:37[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (36) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (63) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (76) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b41ch ( 46108) map[0m
+[0;32mI (103) esp_image: segment 1: paddr=0001b444 vaddr=3ffb0000 size=02b78h ( 11128) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001dfc4 vaddr=40080000 size=02054h (  8276) load[0m
+[0;32mI (111) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=142b8h ( 82616) map[0m
+[0;32mI (144) esp_image: segment 4: paddr=000342e0 vaddr=40082054 size=09e90h ( 40592) load[0m
+[0;32mI (161) esp_image: segment 5: paddr=0003e178 vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (167) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (167) boot: Disabling RNG early entropy source...[0m
+[0;33mW (189) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;33mW (191) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x108 (ESP_ERR_INVALID_RESPONSE) at 0x400d81ba
+file: "./main/main.cpp" line 21
+func: void app_main()
+expression: imu.init()
+
+abort() was called at PC 0x40086e53 on core 0
+
+
+Backtrace: 0x40086ef9:0x3ffb47b0 0x40086ec1:0x3ffb47d0 0x40086015:0x3ffb47f0 0x40086e53:0x3ffb4860 0x400d81ba:0x3ffb4890 0x400d4554:0x3ffb4900 0x400e1ff9:0x3ffb4930
+
+
+
+
+ELF file SHA256: 9841e375a
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6272
+load:0x40078000,len:15824
+load:0x40080400,len:3988
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.1-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Oct 11 2026 12:16:37[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (36) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (63) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (76) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b41ch ( 46108) map[0m
+[0;32mI (103) esp_image: segment 1: paddr=0001b444 vaddr=3ffb0000 size=02b78h ( 11128) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001dfc4 vaddr=40080000 size=02054h (  8276) load[0m
+[0;32mI (111) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=142b8h ( 82616) map[0m
+[0;32mI (144) esp_image: segment 4: paddr=000342e0 vaddr=40082054 size=09e90h ( 40592) load[0m
+[0;32mI (161) esp_image: segment 5: paddr=0003e178 vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (167) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (167) boot: Disabling RNG early entropy source...[0m
+[0;33mW (189) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;33mW (191) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[1;31mE (418) i2c.master: I2C bus is still busy but software timeout detected[0m
+[0;33mW (418) i2c.common: GPIO 21 is not usable, maybe conflict with others[0m
+[0;33mW (419) i2c.common: GPIO 22 is not usable, maybe conflict with others[0m
+[1;31mE (426) bno055: init(61): BNO055 not responding[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x108 (ESP_ERR_INVALID_RESPONSE) at 0x400d81ba
+file: "./main/main.cpp" line 21
+func: void app_main()
+expression: imu.init()
+
+abort() was called at PC 0x40086e53 on core 0
+
+
+Backtrace: 0x40086ef9:0x3ffb47b0 0x40086ec1:0x3ffb47d0 0x40086015:0x3ffb47f0 0x40086e53:0x3ffb4860 0x400d81ba:0x3ffb4890 0x400d4554:0x3ffb4900 0x400e1ff9:0x3ffb4930
+
+
+
+
+ELF file SHA256: 9841e375a
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6272
+load:0x40078000,len:15824
+load:0x40080400,len:3988
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.1-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Oct 11 2026 12:16:37[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (36) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (63) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (76) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b41ch ( 46108) map[0m
+[0;32mI (103) esp_image: segment 1: paddr=0001b444 vaddr=3ffb0000 size=02b78h ( 11128) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001dfc4 vaddr=40080000 size=02054h (  8276) load[0m
+[0;32mI (111) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=142b8h ( 82616) map[0m
+[0;32mI (144) esp_image: segment 4: paddr=000342e0 vaddr=40082054 size=09e90h ( 40592) load[0m
+[0;32mI (161) esp_image: segment 5: paddr=0003e178 vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (167) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (167) boot: Disabling RNG early entropy source...[0m
+[0;33mW (189) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;33mW (191) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x108 (ESP_ERR_INVALID_RESPONSE) at 0x400d81ba
+file: "./main/main.cpp" line 21
+func: void app_main()
+expression: imu.init()
+
+abort() was called at PC 0x40086e53 on core 0
+
+
+Backtrace: 0x40086ef9:0x3ffb47b0 0x40086ec1:0x3ffb47d0 0x40086015:0x3ffb47f0 0x40086e53:0x3ffb4860 0x400d81ba:0x3ffb4890 0x400d4554:0x3ffb4900 0x400e1ff9:0x3ffb4930
+
+
+
+
+ELF file SHA256: 9841e375a
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6272
+load:0x40078000,len:15824
+load:0x40080400,len:3988
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.1-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Oct 11 2026 12:16:37[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (36) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (63) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (76) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b41ch ( 46108) map[0m
+[0;32mI (103) esp_image: segment 1: paddr=0001b444 vaddr=3ffb0000 size=02b78h ( 11128) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001dfc4 vaddr=40080000 size=02054h (  8276) load[0m
+[0;32mI (111) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=142b8h ( 82616) map[0m
+[0;32mI (144) esp_image: segment 4: paddr=000342e0 vaddr=40082054 size=09e90h ( 40592) load[0m
+[0;32mI (161) esp_image: segment 5: paddr=0003e178 vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (167) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (167) boot: Disabling RNG early entropy source...[0m
+[0;33mW (189) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;33mW (191) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (219) i2c.common: GPIO 21 is not usable, maybe conflict with others[0m
+[0;33mW (220) i2c.common: GPIO 22 is not usable, maybe conflict with others[0m
+[1;31mE (223) i2c.master: I2C hardware timeout detected[0m
+[1;31mE (227) bno055: init(61): BNO055 not responding[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x108 (ESP_ERR_INVALID_RESPONSE) at 0x400d81ba
+file: "./main/main.cpp" line 21
+func: void app_main()
+expression: imu.init()
+
+abort() was called at PC 0x40086e53 on core 0
+
+
+Backtrace: 0x40086ef9:0x3ffb47b0 0x40086ec1:0x3ffb47d0 0x40086015:0x3ffb47f0 0x40086e53:0x3ffb4860 0x400d81ba:0x3ffb4890 0x400d4554:0x3ffb4900 0x400e1ff9:0x3ffb4930
+
+
+
+
+ELF file SHA256: 9841e375a
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6272
+load:0x40078000,len:15824
+load:0x40080400,len:3988
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.1-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Oct 11 2026 12:16:37[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (36) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (63) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (76) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b41ch ( 46108) map[0m
+[0;32mI (103) esp_image: segment 1: paddr=0001b444 vaddr=3ffb0000 size=02b78h ( 11128) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001dfc4 vaddr=40080000 size=02054h (  8276) load[0m
+[0;32mI (111) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=142b8h ( 82616) map[0m
+[0;32mI (144) esp_image: segment 4: paddr=000342e0 vaddr=40082054 size=09e90h ( 40592) load[0m
+[0;32mI (161) esp_image: segment 5: paddr=0003e178 vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (167) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (167) boot: Disabling RNG early entropy source...[0m
+[0;33mW (189) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;33mW (191) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[1;31mE (418) i2c.master: I2C bus is still busy but software timeout detected[0m
+[0;33mW (418) i2c.common: GPIO 21 is not usable, maybe conflict with others[0m
+[0;33mW (419) i2c.common: GPIO 22 is not usable, maybe conflict with others[0m
+[1;31mE (426) bno055: init(61): BNO055 not responding[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x108 (ESP_ERR_INVALID_RESPONSE) at 0x400d81ba
+file: "./main/main.cpp" line 21
+func: void app_main()
+expression: imu.init()
+
+abort() was called at PC 0x40086e53 on core 0
+
+
+Backtrace: 0x40086ef9:0x3ffb47b0 0x40086ec1:0x3ffb47d0 0x40086015:0x3ffb47f0 0x40086e53:0x3ffb4860 0x400d81ba:0x3ffb4890 0x400d4554:0x3ffb4900 0x400e1ff9:0x3ffb4930
+
+
+
+
+ELF file SHA256: 9841e375a
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6272
+load:0x40078000,len:15824
+load:0x40080400,len:3988
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.1-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Oct 11 2026 12:16:37[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (36) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (63) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (76) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b41ch ( 46108) map[0m
+[0;32mI (103) esp_image: segment 1: paddr=0001b444 vaddr=3ffb0000 size=02b78h ( 11128) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001dfc4 vaddr=40080000 size=02054h (  8276) load[0m
+[0;32mI (111) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=142b8h ( 82616) map[0m
+[0;32mI (144) esp_image: segment 4: paddr=000342e0 vaddr=40082054 size=09e90h ( 40592) load[0m
+[0;32mI (161) esp_image: segment 5: paddr=0003e178 vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (167) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (167) boot: Disabling RNG early entropy source...[0m
+[0;33mW (189) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;33mW (191) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x108 (ESP_ERR_INVALID_RESPONSE) at 0x400d81ba
+file: "./main/main.cpp" line 21
+func: void app_main()
+expression: imu.init()
+
+abort() was called at PC 0x40086e53 on core 0
+
+
+Backtrace: 0x40086ef9:0x3ffb47b0 0x40086ec1:0x3ffb47d0 0x40086015:0x3ffb47f0 0x40086e53:0x3ffb4860 0x400d81ba:0x3ffb4890 0x400d4554:0x3ffb4900 0x400e1ff9:0x3ffb4930
+
+
+
+
+ELF file SHA256: 9841e375a
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6272
+load:0x40078000,len:15824
+load:0x40080400,len:3988
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.1-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Oct 11 2026 12:16:37[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (36) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (63) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (76) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b41ch ( 46108) map[0m
+[0;32mI (103) esp_image: segment 1: paddr=0001b444 vaddr=3ffb0000 size=02b78h ( 11128) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001dfc4 vaddr=40080000 size=02054h (  8276) load[0m
+[0;32mI (111) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=142b8h ( 82616) map[0m
+[0;32mI (144) esp_image: segment 4: paddr=000342e0 vaddr=40082054 size=09e90h ( 40592) load[0m
+[0;32mI (161) esp_image: segment 5: paddr=0003e178 vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (167) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (167) boot: Disabling RNG early entropy source...[0m
+[0;33mW (189) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;33mW (191) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[1;31mE (217) bno055: init(61): BNO055 not responding[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x108 (ESP_ERR_INVALID_RESPONSE) at 0x400d81ba
+file: "./main/main.cpp" line 21
+func: void app_main()
+expression: imu.init()
+
+abort() was called at PC 0x40086e53 on core 0
+
+
+Backtrace: 0x40086ef9:0x3ffb47b0 0x40086ec1:0x3ffb47d0 0x40086015:0x3ffb47f0 0x40086e53:0x3ffb4860 0x400d81ba:0x3ffb4890 0x400d4554:0x3ffb4900 0x400e1ff9:0x3ffb4930
+
+
+
+
+ELF file SHA256: 9841e375a
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6272
+load:0x40078000,len:15824
+load:0x40080400,len:3988
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.1-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Oct 11 2026 12:16:37[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (36) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (63) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (76) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b41ch ( 46108) map[0m
+[0;32mI (103) esp_image: segment 1: paddr=0001b444 vaddr=3ffb0000 size=02b78h ( 11128) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001dfc4 vaddr=40080000 size=02054h (  8276) load[0m
+[0;32mI (111) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=142b8h ( 82616) map[0m
+[0;32mI (144) esp_image: segment 4: paddr=000342e0 vaddr=40082054 size=09e90h ( 40592) load[0m
+[0;32mI (161) esp_image: segment 5: paddr=0003e178 vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (167) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (167) boot: Disabling RNG early entropy source...[0m
+[0;33mW (189) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;33mW (191) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x108 (ESP_ERR_INVALID_RESPONSE) at 0x400d81ba
+file: "./main/main.cpp" line 21
+func: void app_main()
+expression: imu.init()
+
+abort() was called at PC 0x40086e53 on core 0
+
+
+Backtrace: 0x40086ef9:0x3ffb47b0 0x40086ec1:0x3ffb47d0 0x40086015:0x3ffb47f0 0x40086e53:0x3ffb4860 0x400d81ba:0x3ffb4890 0x400d4554:0x3ffb4900 0x400e1ff9:0x3ffb4930
+
+
+
+
+ELF file SHA256: 9841e375a
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6272
+load:0x40078000,len:15824
+load:0x40080400,len:3988
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.1-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Oct 11 2026 12:16:37[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (36) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (63) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (76) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b41ch ( 46108) map[0m
+[0;32mI (103) esp_image: segment 1: paddr=0001b444 vaddr=3ffb0000 size=02b78h ( 11128) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001dfc4 vaddr=40080000 size=02054h (  8276) load[0m
+[0;32mI (111) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=142b8h ( 82616) map[0m
+[0;32mI (144) esp_image: segment 4: paddr=000342e0 vaddr=40082054 size=09e90h ( 40592) load[0m
+[0;32mI (161) esp_image: segment 5: paddr=0003e178 vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (167) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (167) boot: Disabling RNG early entropy source...[0m
+[0;33mW (189) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;33mW (191) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (218) i2c.common: GPIO 21 is not usable, maybe conflict with others[0m
+[0;33mW (218) i2c.common: GPIO 22 is not usable, maybe conflict with others[0m
+[1;31mE (222) i2c.master: I2C hardware timeout detected[0m
+[1;31mE (226) bno055: init(61): BNO055 not responding[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x108 (ESP_ERR_INVALID_RESPONSE) at 0x400d81ba
+file: "./main/main.cpp" line 21
+func: void app_main()
+expression: imu.init()
+
+abort() was called at PC 0x40086e53 on core 0
+
+
+Backtrace: 0x40086ef9:0x3ffb47b0 0x40086ec1:0x3ffb47d0 0x40086015:0x3ffb47f0 0x40086e53:0x3ffb4860 0x400d81ba:0x3ffb4890 0x400d4554:0x3ffb4900 0x400e1ff9:0x3ffb4930
+
+
+
+
+ELF file SHA256: 9841e375a
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6272
+load:0x40078000,len:15824
+load:0x40080400,len:3988
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.1-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Oct 11 2026 12:16:37[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (36) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (63) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (76) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b41ch ( 46108) map[0m
+[0;32mI (103) esp_image: segment 1: paddr=0001b444 vaddr=3ffb0000 size=02b78h ( 11128) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001dfc4 vaddr=40080000 size=02054h (  8276) load[0m
+[0;32mI (111) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=142b8h ( 82616) map[0m
+[0;32mI (144) esp_image: segment 4: paddr=000342e0 vaddr=40082054 size=09e90h ( 40592) load[0m
+[0;32mI (161) esp_image: segment 5: paddr=0003e178 vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (167) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (167) boot: Disabling RNG early entropy source...[0m
+[0;33mW (189) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;33mW (191) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (222) i2c.common: GPIO 21 is not usable, maybe conflict with others[0m
+[0;33mW (222) i2c.common: GPIO 22 is not usable, maybe conflict with others[0m
+[1;31mE (224) i2c.master: I2C hardware timeout detected[0m
+[1;31mE (228) bno055: init(61): BNO055 not responding[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x108 (ESP_ERR_INVALID_RESPONSE) at 0x400d81ba
+file: "./main/main.cpp" line 21
+func: void app_main()
+expression: imu.init()
+
+abort() was called at PC 0x40086e53 on core 0
+
+
+Backtrace: 0x40086ef9:0x3ffb47b0 0x40086ec1:0x3ffb47d0 0x40086015:0x3ffb47f0 0x40086e53:0x3ffb4860 0x400d81ba:0x3ffb4890 0x400d4554:0x3ffb4900 0x400e1ff9:0x3ffb4930
+
+
+
+
+ELF file SHA256: 9841e375a
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6272
+load:0x40078000,len:15824
+load:0x40080400,len:3988
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.1-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Oct 11 2026 12:16:37[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (36) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (63) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (76) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b41ch ( 46108) map[0m
+[0;32mI (103) esp_image: segment 1: paddr=0001b444 vaddr=3ffb0000 size=02b78h ( 11128) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001dfc4 vaddr=40080000 size=02054h (  8276) load[0m
+[0;32mI (111) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=142b8h ( 82616) map[0m
+[0;32mI (144) esp_image: segment 4: paddr=000342e0 vaddr=40082054 size=09e90h ( 40592) load[0m
+[0;32mI (161) esp_image: segment 5: paddr=0003e178 vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (167) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (167) boot: Disabling RNG early entropy source...[0m
+[0;33mW (189) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;33mW (191) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x108 (ESP_ERR_INVALID_RESPONSE) at 0x400d81ba
+file: "./main/main.cpp" line 21
+func: void app_main()
+expression: imu.init()
+
+abort() was called at PC 0x40086e53 on core 0
+
+
+Backtrace: 0x40086ef9:0x3ffb47b0 0x40086ec1:0x3ffb47d0 0x40086015:0x3ffb47f0 0x40086e53:0x3ffb4860 0x400d81ba:0x3ffb4890 0x400d4554:0x3ffb4900 0x400e1ff9:0x3ffb4930
+
+
+
+
+ELF file SHA256: 9841e375a
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6272
+load:0x40078000,len:15824
+load:0x40080400,len:3988
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.1-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Oct 11 2026 12:16:37[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (36) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (63) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (76) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b41ch ( 46108) map[0m
+[0;32mI (103) esp_image: segment 1: paddr=0001b444 vaddr=3ffb0000 size=02b78h ( 11128) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001dfc4 vaddr=40080000 size=02054h (  8276) load[0m
+[0;32mI (111) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=142b8h ( 82616) map[0m
+[0;32mI (144) esp_image: segment 4: paddr=000342e0 vaddr=40082054 size=09e90h ( 40592) load[0m
+[0;32mI (161) esp_image: segment 5: paddr=0003e178 vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (167) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (167) boot: Disabling RNG early entropy source...[0m
+[0;33mW (189) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;33mW (191) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x108 (ESP_ERR_INVALID_RESPONSE) at 0x400d81ba
+file: "./main/main.cpp" line 21
+func: void app_main()
+expression: imu.init()
+
+abort() was called at PC 0x40086e53 on core 0
+
+
+Backtrace: 0x40086ef9:0x3ffb47b0 0x40086ec1:0x3ffb47d0 0x40086015:0x3ffb47f0 0x40086e53:0x3ffb4860 0x400d81ba:0x3ffb4890 0x400d4554:0x3ffb4900 0x400e1ff9:0x3ffb4930
+
+
+
+
+ELF file SHA256: 9841e375a
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6272
+load:0x40078000,len:15824
+load:0x40080400,len:3988
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.1-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Oct 11 2026 12:16:37[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (36) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (63) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (76) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b41ch ( 46108) map[0m
+[0;32mI (103) esp_image: segment 1: paddr=0001b444 vaddr=3ffb0000 size=02b78h ( 11128) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001dfc4 vaddr=40080000 size=02054h (  8276) load[0m
+[0;32mI (111) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=142b8h ( 82616) map[0m
+[0;32mI (144) esp_image: segment 4: paddr=000342e0 vaddr=40082054 size=09e90h ( 40592) load[0m
+[0;32mI (161) esp_image: segment 5: paddr=0003e178 vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (167) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (167) boot: Disabling RNG early entropy source...[0m
+[0;33mW (189) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;33mW (191) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[1;31mE (418) i2c.master: I2C bus is still busy but software timeout detected[0m
+[0;33mW (418) i2c.common: GPIO 21 is not usable, maybe conflict with others[0m
+[0;33mW (419) i2c.common: GPIO 22 is not usable, maybe conflict with others[0m
+[1;31mE (426) bno055: init(61): BNO055 not responding[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x108 (ESP_ERR_INVALID_RESPONSE) at 0x400d81ba
+file: "./main/main.cpp" line 21
+func: void app_main()
+expression: imu.init()
+
+abort() was called at PC 0x40086e53 on core 0
+
+
+Backtrace: 0x40086ef9:0x3ffb47b0 0x40086ec1:0x3ffb47d0 0x40086015:0x3ffb47f0 0x40086e53:0x3ffb4860 0x400d81ba:0x3ffb4890 0x400d4554:0x3ffb4900 0x400e1ff9:0x3ffb4930
+
+
+
+
+ELF file SHA256: 9841e375a
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6272
+load:0x40078000,len:15824
+load:0x40080400,len:3988
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.1-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Oct 11 2026 12:16:37[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (36) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (63) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (76) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b41ch ( 46108) map[0m
+[0;32mI (103) esp_image: segment 1: paddr=0001b444 vaddr=3ffb0000 size=02b78h ( 11128) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001dfc4 vaddr=40080000 size=02054h (  8276) load[0m
+[0;32mI (111) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=142b8h ( 82616) map[0m
+[0;32mI (144) esp_image: segment 4: paddr=000342e0 vaddr=40082054 size=09e90h ( 40592) load[0m
+[0;32mI (161) esp_image: segment 5: paddr=0003e178 vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (167) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (167) boot: Disabling RNG early entropy source...[0m
+[0;33mW (189) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;33mW (191) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x108 (ESP_ERR_INVALID_RESPONSE) at 0x400d81ba
+file: "./main/main.cpp" line 21
+func: void app_main()
+expression: imu.init()
+
+abort() was called at PC 0x40086e53 on core 0
+
+
+Backtrace: 0x40086ef9:0x3ffb47b0 0x40086ec1:0x3ffb47d0 0x40086015:0x3ffb47f0 0x40086e53:0x3ffb4860 0x400d81ba:0x3ffb4890 0x400d4554:0x3ffb4900 0x400e1ff9:0x3ffb4930
+
+
+
+
+ELF file SHA256: 9841e375a
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6272
+load:0x40078000,len:15824
+load:0x40080400,len:3988
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.1-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Oct 11 2026 12:16:37[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (36) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (63) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (76) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b41ch ( 46108) map[0m
+[0;32mI (103) esp_image: segment 1: paddr=0001b444 vaddr=3ffb0000 size=02b78h ( 11128) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001dfc4 vaddr=40080000 size=02054h (  8276) load[0m
+[0;32mI (111) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=142b8h ( 82616) map[0m
+[0;32mI (144) esp_image: segment 4: paddr=000342e0 vaddr=40082054 size=09e90h ( 40592) load[0m
+[0;32mI (161) esp_image: segment 5: paddr=0003e178 vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (167) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (167) boot: Disabling RNG early entropy source...[0m
+[0;33mW (189) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;33mW (191) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x108 (ESP_ERR_INVALID_RESPONSE) at 0x400d81ba
+file: "./main/main.cpp" line 21
+func: void app_main()
+expression: imu.init()
+
+abort() was called at PC 0x40086e53 on core 0
+
+
+Backtrace: 0x40086ef9:0x3ffb47b0 0x40086ec1:0x3ffb47d0 0x40086015:0x3ffb47f0 0x40086e53:0x3ffb4860 0x400d81ba:0x3ffb4890 0x400d4554:0x3ffb4900 0x400e1ff9:0x3ffb4930
+
+
+
+
+ELF file SHA256: 9841e375a
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6272
+load:0x40078000,len:15824
+load:0x40080400,len:3988
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.1-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Oct 11 2026 12:16:37[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (36) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (63) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (76) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b41ch ( 46108) map[0m
+[0;32mI (103) esp_image: segment 1: paddr=0001b444 vaddr=3ffb0000 size=02b78h ( 11128) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001dfc4 vaddr=40080000 size=02054h (  8276) load[0m
+[0;32mI (111) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=142b8h ( 82616) map[0m
+[0;32mI (144) esp_image: segment 4: paddr=000342e0 vaddr=40082054 size=09e90h ( 40592) load[0m
+[0;32mI (161) esp_image: segment 5: paddr=0003e178 vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (167) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (167) boot: Disabling RNG early entropy source...[0m
+[0;33mW (189) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;33mW (191) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x108 (ESP_ERR_INVALID_RESPONSE) at 0x400d81ba
+file: "./main/main.cpp" line 21
+func: void app_main()
+expression: imu.init()
+
+abort() was called at PC 0x40086e53 on core 0
+
+
+Backtrace: 0x40086ef9:0x3ffb47b0 0x40086ec1:0x3ffb47d0 0x40086015:0x3ffb47f0 0x40086e53:0x3ffb4860 0x400d81ba:0x3ffb4890 0x400d4554:0x3ffb4900 0x400e1ff9:0x3ffb4930
+
+
+
+
+ELF file SHA256: 9841e375a
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6272
+load:0x40078000,len:15824
+load:0x40080400,len:3988
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.1-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Oct 11 2026 12:16:37[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (36) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (63) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (76) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b41ch ( 46108) map[0m
+[0;32mI (103) esp_image: segment 1: paddr=0001b444 vaddr=3ffb0000 size=02b78h ( 11128) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001dfc4 vaddr=40080000 size=02054h (  8276) load[0m
+[0;32mI (111) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=142b8h ( 82616) map[0m
+[0;32mI (144) esp_image: segment 4: paddr=000342e0 vaddr=40082054 size=09e90h ( 40592) load[0m
+[0;32mI (161) esp_image: segment 5: paddr=0003e178 vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (167) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (167) boot: Disabling RNG early entropy source...[0m
+[0;33mW (189) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;33mW (191) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (218) i2c.common: GPIO 21 is not usable, maybe conflict with others[0m
+[0;33mW (218) i2c.common: GPIO 22 is not usable, maybe conflict with others[0m
+[1;31mE (222) i2c.master: I2C hardware timeout detected[0m
+[1;31mE (226) bno055: init(61): BNO055 not responding[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x108 (ESP_ERR_INVALID_RESPONSE) at 0x400d81ba
+file: "./main/main.cpp" line 21
+func: void app_main()
+expression: imu.init()
+
+abort() was called at PC 0x40086e53 on core 0
+
+
+Backtrace: 0x40086ef9:0x3ffb47b0 0x40086ec1:0x3ffb47d0 0x40086015:0x3ffb47f0 0x40086e53:0x3ffb4860 0x400d81ba:0x3ffb4890 0x400d4554:0x3ffb4900 0x400e1ff9:0x3ffb4930
+
+
+
+
+ELF file SHA256: 9841e375a
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6272
+load:0x40078000,len:15824
+load:0x40080400,len:3988
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.1-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Oct 11 2026 12:16:37[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (36) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (63) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (76) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b41ch ( 46108) map[0m
+[0;32mI (103) esp_image: segment 1: paddr=0001b444 vaddr=3ffb0000 size=02b78h ( 11128) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001dfc4 vaddr=40080000 size=02054h (  8276) load[0m
+[0;32mI (111) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=142b8h ( 82616) map[0m
+[0;32mI (144) esp_image: segment 4: paddr=000342e0 vaddr=40082054 size=09e90h ( 40592) load[0m
+[0;32mI (161) esp_image: segment 5: paddr=0003e178 vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (167) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (167) boot: Disabling RNG early entropy source...[0m
+[0;33mW (189) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;33mW (191) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x108 (ESP_ERR_INVALID_RESPONSE) at 0x400d81ba
+file: "./main/main.cpp" line 21
+func: void app_main()
+expression: imu.init()
+
+abort() was called at PC 0x40086e53 on core 0
+
+
+Backtrace: 0x40086ef9:0x3ffb47b0 0x40086ec1:0x3ffb47d0 0x40086015:0x3ffb47f0 0x40086e53:0x3ffb4860 0x400d81ba:0x3ffb4890 0x400d4554:0x3ffb4900 0x400e1ff9:0x3ffb4930
+
+
+
+
+ELF file SHA256: 9841e375a
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6272
+load:0x40078000,len:15824
+load:0x40080400,len:3988
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.1-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Oct 11 2026 12:16:37[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (36) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (63) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (76) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b41ch ( 46108) map[0m
+[0;32mI (103) esp_image: segment 1: paddr=0001b444 vaddr=3ffb0000 size=02b78h ( 11128) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001dfc4 vaddr=40080000 size=02054h (  8276) load[0m
+[0;32mI (111) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=142b8h ( 82616) map[0m
+[0;32mI (144) esp_image: segment 4: paddr=000342e0 vaddr=40082054 size=09e90h ( 40592) load[0m
+[0;32mI (161) esp_image: segment 5: paddr=0003e178 vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (167) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (167) boot: Disabling RNG early entropy source...[0m
+[0;33mW (189) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;33mW (191) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x108 (ESP_ERR_INVALID_RESPONSE) at 0x400d81ba
+file: "./main/main.cpp" line 21
+func: void app_main()
+expression: imu.init()
+
+abort() was called at PC 0x40086e53 on core 0
+
+
+Backtrace: 0x40086ef9:0x3ffb47b0 0x40086ec1:0x3ffb47d0 0x40086015:0x3ffb47f0 0x40086e53:0x3ffb4860 0x400d81ba:0x3ffb4890 0x400d4554:0x3ffb4900 0x400e1ff9:0x3ffb4930
+
+
+
+
+ELF file SHA256: 9841e375a
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6272
+load:0x40078000,len:15824
+load:0x40080400,len:3988
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.1-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Oct 11 2026 12:16:37[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (36) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (63) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (76) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b41ch ( 46108) map[0m
+[0;32mI (103) esp_image: segment 1: paddr=0001b444 vaddr=3ffb0000 size=02b78h ( 11128) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001dfc4 vaddr=40080000 size=02054h (  8276) load[0m
+[0;32mI (111) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=142b8h ( 82616) map[0m
+[0;32mI (144) esp_image: segment 4: paddr=000342e0 vaddr=40082054 size=09e90h ( 40592) load[0m
+[0;32mI (161) esp_image: segment 5: paddr=0003e178 vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (167) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (167) boot: Disabling RNG early entropy source...[0m
+[0;33mW (189) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;33mW (191) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (222) i2c.common: GPIO 21 is not usable, maybe conflict with others[0m
+[0;33mW (222) i2c.common: GPIO 22 is not usable, maybe conflict with others[0m
+[1;31mE (224) i2c.master: I2C hardware timeout detected[0m
+[1;31mE (228) bno055: init(61): BNO055 not responding[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x108 (ESP_ERR_INVALID_RESPONSE) at 0x400d81ba
+file: "./main/main.cpp" line 21
+func: void app_main()
+expression: imu.init()
+
+abort() was called at PC 0x40086e53 on core 0
+
+
+Backtrace: 0x40086ef9:0x3ffb47b0 0x40086ec1:0x3ffb47d0 0x40086015:0x3ffb47f0 0x40086e53:0x3ffb4860 0x400d81ba:0x3ffb4890 0x400d4554:0x3ffb4900 0x400e1ff9:0x3ffb4930
+
+
+
+
+ELF file SHA256: 9841e375a
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6272
+load:0x40078000,len:15824
+load:0x40080400,len:3988
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.1-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Oct 11 2026 12:16:37[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (36) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (63) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (76) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b41ch ( 46108) map[0m
+[0;32mI (103) esp_image: segment 1: paddr=0001b444 vaddr=3ffb0000 size=02b78h ( 11128) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001dfc4 vaddr=40080000 size=02054h (  8276) load[0m
+[0;32mI (111) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=142b8h ( 82616) map[0m
+[0;32mI (144) esp_image: segment 4: paddr=000342e0 vaddr=40082054 size=09e90h ( 40592) load[0m
+[0;32mI (161) esp_image: segment 5: paddr=0003e178 vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (167) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (167) boot: Disabling RNG early entropy source...[0m
+[0;33mW (189) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;33mW (191) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x108 (ESP_ERR_INVALID_RESPONSE) at 0x400d81ba
+file: "./main/main.cpp" line 21
+func: void app_main()
+expression: imu.init()
+
+abort() was called at PC 0x40086e53 on core 0
+
+
+Backtrace: 0x40086ef9:0x3ffb47b0 0x40086ec1:0x3ffb47d0 0x40086015:0x3ffb47f0 0x40086e53:0x3ffb4860 0x400d81ba:0x3ffb4890 0x400d4554:0x3ffb4900 0x400e1ff9:0x3ffb4930
+
+
+
+
+ELF file SHA256: 9841e375a
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6272
+load:0x40078000,len:15824
+load:0x40080400,len:3988
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.1-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Oct 11 2026 12:16:37[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (36) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (63) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (76) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b41ch ( 46108) map[0m
+[0;32mI (103) esp_image: segment 1: paddr=0001b444 vaddr=3ffb0000 size=02b78h ( 11128) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001dfc4 vaddr=40080000 size=02054h (  8276) load[0m
+[0;32mI (111) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=142b8h ( 82616) map[0m
+[0;32mI (144) esp_image: segment 4: paddr=000342e0 vaddr=40082054 size=09e90h ( 40592) load[0m
+[0;32mI (161) esp_image: segment 5: paddr=0003e178 vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (167) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (167) boot: Disabling RNG early entropy source...[0m
+[0;33mW (189) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;33mW (191) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x108 (ESP_ERR_INVALID_RESPONSE) at 0x400d81ba
+file: "./main/main.cpp" line 21
+func: void app_main()
+expression: imu.init()
+
+abort() was called at PC 0x40086e53 on core 0
+
+
+Backtrace: 0x40086ef9:0x3ffb47b0 0x40086ec1:0x3ffb47d0 0x40086015:0x3ffb47f0 0x40086e53:0x3ffb4860 0x400d81ba:0x3ffb4890 0x400d4554:0x3ffb4900 0x400e1ff9:0x3ffb4930
+
+
+
+
+ELF file SHA256: 9841e375a
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6272
+load:0x40078000,len:15824
+load:0x40080400,len:3988
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.1-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Oct 11 2026 12:16:37[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (36) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (63) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (76) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b41ch ( 46108) map[0m
+[0;32mI (103) esp_image: segment 1: paddr=0001b444 vaddr=3ffb0000 size=02b78h ( 11128) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001dfc4 vaddr=40080000 size=02054h (  8276) load[0m
+[0;32mI (111) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=142b8h ( 82616) map[0m
+[0;32mI (144) esp_image: segment 4: paddr=000342e0 vaddr=40082054 size=09e90h ( 40592) load[0m
+[0;32mI (161) esp_image: segment 5: paddr=0003e178 vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (167) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (167) boot: Disabling RNG early entropy source...[0m
+[0;33mW (189) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;33mW (191) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x108 (ESP_ERR_INVALID_RESPONSE) at 0x400d81ba
+file: "./main/main.cpp" line 21
+func: void app_main()
+expression: imu.init()
+
+abort() was called at PC 0x40086e53 on core 0
+
+
+Backtrace: 0x40086ef9:0x3ffb47b0 0x40086ec1:0x3ffb47d0 0x40086015:0x3ffb47f0 0x40086e53:0x3ffb4860 0x400d81ba:0x3ffb4890 0x400d4554:0x3ffb4900 0x400e1ff9:0x3ffb4930
+
+
+
+
+ELF file SHA256: 9841e375a
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6272
+load:0x40078000,len:15824
+load:0x40080400,len:3988
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.1-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Oct 11 2026 12:16:37[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (36) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (63) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (76) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b41ch ( 46108) map[0m
+[0;32mI (103) esp_image: segment 1: paddr=0001b444 vaddr=3ffb0000 size=02b78h ( 11128) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001dfc4 vaddr=40080000 size=02054h (  8276) load[0m
+[0;32mI (111) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=142b8h ( 82616) map[0m
+[0;32mI (144) esp_image: segment 4: paddr=000342e0 vaddr=40082054 size=09e90h ( 40592) load[0m
+[0;32mI (161) esp_image: segment 5: paddr=0003e178 vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (167) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (167) boot: Disabling RNG early entropy source...[0m
+[0;33mW (189) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;33mW (191) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x108 (ESP_ERR_INVALID_RESPONSE) at 0x400d81ba
+file: "./main/main.cpp" line 21
+func: void app_main()
+expression: imu.init()
+
+abort() was called at PC 0x40086e53 on core 0
+
+
+Backtrace: 0x40086ef9:0x3ffb47b0 0x40086ec1:0x3ffb47d0 0x40086015:0x3ffb47f0 0x40086e53:0x3ffb4860 0x400d81ba:0x3ffb4890 0x400d4554:0x3ffb4900 0x400e1ff9:0x3ffb4930
+
+
+
+
+ELF file SHA256: 9841e375a
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6272
+load:0x40078000,len:15824
+load:0x40080400,len:3988
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.1-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Oct 11 2026 12:16:37[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (36) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (63) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (76) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b41ch ( 46108) map[0m
+[0;32mI (103) esp_image: segment 1: paddr=0001b444 vaddr=3ffb0000 size=02b78h ( 11128) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001dfc4 vaddr=40080000 size=02054h (  8276) load[0m
+[0;32mI (111) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=142b8h ( 82616) map[0m
+[0;32mI (144) esp_image: segment 4: paddr=000342e0 vaddr=40082054 size=09e90h ( 40592) load[0m
+[0;32mI (161) esp_image: segment 5: paddr=0003e178 vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (167) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (167) boot: Disabling RNG early entropy source...[0m
+[0;33mW (189) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;33mW (191) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x108 (ESP_ERR_INVALID_RESPONSE) at 0x400d81ba
+file: "./main/main.cpp" line 21
+func: void app_main()
+expression: imu.init()
+
+abort() was called at PC 0x40086e53 on core 0
+
+
+Backtrace: 0x40086ef9:0x3ffb47b0 0x40086ec1:0x3ffb47d0 0x40086015:0x3ffb47f0 0x40086e53:0x3ffb4860 0x400d81ba:0x3ffb4890 0x400d4554:0x3ffb4900 0x400e1ff9:0x3ffb4930
+
+
+
+
+ELF file SHA256: 9841e375a
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6272
+load:0x40078000,len:15824
+load:0x40080400,len:3988
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.1-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Oct 11 2026 12:16:37[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (36) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (63) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (76) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b41ch ( 46108) map[0m
+[0;32mI (103) esp_image: segment 1: paddr=0001b444 vaddr=3ffb0000 size=02b78h ( 11128) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001dfc4 vaddr=40080000 size=02054h (  8276) load[0m
+[0;32mI (111) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=142b8h ( 82616) map[0m
+[0;32mI (144) esp_image: segment 4: paddr=000342e0 vaddr=40082054 size=09e90h ( 40592) load[0m
+[0;32mI (161) esp_image: segment 5: paddr=0003e178 vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (167) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (167) boot: Disabling RNG early entropy source...[0m
+[0;33mW (189) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;33mW (191) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x108 (ESP_ERR_INVALID_RESPONSE) at 0x400d81ba
+file: "./main/main.cpp" line 21
+func: void app_main()
+expression: imu.init()
+
+abort() was called at PC 0x40086e53 on core 0
+
+
+Backtrace: 0x40086ef9:0x3ffb47b0 0x40086ec1:0x3ffb47d0 0x40086015:0x3ffb47f0 0x40086e53:0x3ffb4860 0x400d81ba:0x3ffb4890 0x400d4554:0x3ffb4900 0x400e1ff9:0x3ffb4930
+
+
+
+
+ELF file SHA256: 9841e375a
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6272
+load:0x40078000,len:15824
+load:0x40080400,len:3988
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.1-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Oct 11 2026 12:16:37[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (36) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (63) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (76) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b41ch ( 46108) map[0m
+[0;32mI (103) esp_image: segment 1: paddr=0001b444 vaddr=3ffb0000 size=02b78h ( 11128) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001dfc4 vaddr=40080000 size=02054h (  8276) load[0m
+[0;32mI (111) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=142b8h ( 82616) map[0m
+[0;32mI (144) esp_image: segment 4: paddr=000342e0 vaddr=40082054 size=09e90h ( 40592) load[0m
+[0;32mI (161) esp_image: segment 5: paddr=0003e178 vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (167) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (167) boot: Disabling RNG early entropy source...[0m
+[0;33mW (189) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;33mW (191) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x108 (ESP_ERR_INVALID_RESPONSE) at 0x400d81ba
+file: "./main/main.cpp" line 21
+func: void app_main()
+expression: imu.init()
+
+abort() was called at PC 0x40086e53 on core 0
+
+
+Backtrace: 0x40086ef9:0x3ffb47b0 0x40086ec1:0x3ffb47d0 0x40086015:0x3ffb47f0 0x40086e53:0x3ffb4860 0x400d81ba:0x3ffb4890 0x400d4554:0x3ffb4900 0x400e1ff9:0x3ffb4930
+
+
+
+
+ELF file SHA256: 9841e375a
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6272
+load:0x40078000,len:15824
+load:0x40080400,len:3988
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.1-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Oct 11 2026 12:16:37[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (36) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (63) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (76) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b41ch ( 46108) map[0m
+[0;32mI (103) esp_image: segment 1: paddr=0001b444 vaddr=3ffb0000 size=02b78h ( 11128) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001dfc4 vaddr=40080000 size=02054h (  8276) load[0m
+[0;32mI (111) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=142b8h ( 82616) map[0m
+[0;32mI (144) esp_image: segment 4: paddr=000342e0 vaddr=40082054 size=09e90h ( 40592) load[0m
+[0;32mI (161) esp_image: segment 5: paddr=0003e178 vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (167) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (167) boot: Disabling RNG early entropy source...[0m
+[0;33mW (189) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;33mW (191) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x108 (ESP_ERR_INVALID_RESPONSE) at 0x400d81ba
+file: "./main/main.cpp" line 21
+func: void app_main()
+expression: imu.init()
+
+abort() was called at PC 0x40086e53 on core 0
+
+
+Backtrace: 0x40086ef9:0x3ffb47b0 0x40086ec1:0x3ffb47d0 0x40086015:0x3ffb47f0 0x40086e53:0x3ffb4860 0x400d81ba:0x3ffb4890 0x400d4554:0x3ffb4900 0x400e1ff9:0x3ffb4930
+
+
+
+
+ELF file SHA256: 9841e375a
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6272
+load:0x40078000,len:15824
+load:0x40080400,len:3988
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.1-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Oct 11 2026 12:16:37[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (36) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (63) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (76) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b41ch ( 46108) map[0m
+[0;32mI (103) esp_image: segment 1: paddr=0001b444 vaddr=3ffb0000 size=02b78h ( 11128) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001dfc4 vaddr=40080000 size=02054h (  8276) load[0m
+[0;32mI (111) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=142b8h ( 82616) map[0m
+[0;32mI (144) esp_image: segment 4: paddr=000342e0 vaddr=40082054 size=09e90h ( 40592) load[0m
+[0;32mI (161) esp_image: segment 5: paddr=0003e178 vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (167) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (167) boot: Disabling RNG early entropy source...[0m
+[0;33mW (189) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;33mW (191) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x108 (ESP_ERR_INVALID_RESPONSE) at 0x400d81ba
+file: "./main/main.cpp" line 21
+func: void app_main()
+expression: imu.init()
+
+abort() was called at PC 0x40086e53 on core 0
+
+
+Backtrace: 0x40086ef9:0x3ffb47b0 0x40086ec1:0x3ffb47d0 0x40086015:0x3ffb47f0 0x40086e53:0x3ffb4860 0x400d81ba:0x3ffb4890 0x400d4554:0x3ffb4900 0x400e1ff9:0x3ffb4930
+
+
+
+
+ELF file SHA256: 9841e375a
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6272
+load:0x40078000,len:15824
+load:0x40080400,len:3988
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.1-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Oct 11 2026 12:16:37[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (36) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (63) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (76) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b41ch ( 46108) map[0m
+[0;32mI (103) esp_image: segment 1: paddr=0001b444 vaddr=3ffb0000 size=02b78h ( 11128) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001dfc4 vaddr=40080000 size=02054h (  8276) load[0m
+[0;32mI (111) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=142b8h ( 82616) map[0m
+[0;32mI (144) esp_image: segment 4: paddr=000342e0 vaddr=40082054 size=09e90h ( 40592) load[0m
+[0;32mI (161) esp_image: segment 5: paddr=0003e178 vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (167) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (167) boot: Disabling RNG early entropy source...[0m
+[0;33mW (189) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;33mW (191) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[1;31mE (418) i2c.master: I2C bus is still busy but software timeout detected[0m
+[0;33mW (418) i2c.common: GPIO 21 is not usable, maybe conflict with others[0m
+[0;33mW (419) i2c.common: GPIO 22 is not usable, maybe conflict with others[0m
+[1;31mE (426) bno055: init(61): BNO055 not responding[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x108 (ESP_ERR_INVALID_RESPONSE) at 0x400d81ba
+file: "./main/main.cpp" line 21
+func: void app_main()
+expression: imu.init()
+
+abort() was called at PC 0x40086e53 on core 0
+
+
+Backtrace: 0x40086ef9:0x3ffb47b0 0x40086ec1:0x3ffb47d0 0x40086015:0x3ffb47f0 0x40086e53:0x3ffb4860 0x400d81ba:0x3ffb4890 0x400d4554:0x3ffb4900 0x400e1ff9:0x3ffb4930
+
+
+
+
+ELF file SHA256: 9841e375a
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6272
+load:0x40078000,len:15824
+load:0x40080400,len:3988
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.1-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Oct 11 2026 12:16:37[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (36) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (63) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (76) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b41ch ( 46108) map[0m
+[0;32mI (103) esp_image: segment 1: paddr=0001b444 vaddr=3ffb0000 size=02b78h ( 11128) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001dfc4 vaddr=40080000 size=02054h (  8276) load[0m
+[0;32mI (111) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=142b8h ( 82616) map[0m
+[0;32mI (144) esp_image: segment 4: paddr=000342e0 vaddr=40082054 size=09e90h ( 40592) load[0m
+[0;32mI (161) esp_image: segment 5: paddr=0003e178 vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (167) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (167) boot: Disabling RNG early entropy source...[0m
+[0;33mW (189) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;33mW (191) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[1;31mE (418) i2c.master: I2C bus is still busy but software timeout detected[0m
+[0;33mW (418) i2c.common: GPIO 21 is not usable, maybe conflict with others[0m
+[0;33mW (419) i2c.common: GPIO 22 is not usable, maybe conflict with others[0m
+[1;31mE (426) bno055: init(61): BNO055 not responding[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x108 (ESP_ERR_INVALID_RESPONSE) at 0x400d81ba
+file: "./main/main.cpp" line 21
+func: void app_main()
+expression: imu.init()
+
+abort() was called at PC 0x40086e53 on core 0
+
+
+Backtrace: 0x40086ef9:0x3ffb47b0 0x40086ec1:0x3ffb47d0 0x40086015:0x3ffb47f0 0x40086e53:0x3ffb4860 0x400d81ba:0x3ffb4890 0x400d4554:0x3ffb4900 0x400e1ff9:0x3ffb4930
+
+
+
+
+ELF file SHA256: 9841e375a
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6272
+load:0x40078000,len:15824
+load:0x40080400,len:3988
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.1-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Oct 11 2026 12:16:37[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (36) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (63) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (76) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b41ch ( 46108) map[0m
+[0;32mI (103) esp_image: segment 1: paddr=0001b444 vaddr=3ffb0000 size=02b78h ( 11128) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001dfc4 vaddr=40080000 size=02054h (  8276) load[0m
+[0;32mI (111) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=142b8h ( 82616) map[0m
+[0;32mI (144) esp_image: segment 4: paddr=000342e0 vaddr=40082054 size=09e90h ( 40592) load[0m
+[0;32mI (161) esp_image: segment 5: paddr=0003e178 vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (167) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (167) boot: Disabling RNG early entropy source...[0m
+[0;33mW (189) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;33mW (191) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x108 (ESP_ERR_INVALID_RESPONSE) at 0x400d81ba
+file: "./main/main.cpp" line 21
+func: void app_main()
+expression: imu.init()
+
+abort() was called at PC 0x40086e53 on core 0
+
+
+Backtrace: 0x40086ef9:0x3ffb47b0 0x40086ec1:0x3ffb47d0 0x40086015:0x3ffb47f0 0x40086e53:0x3ffb4860 0x400d81ba:0x3ffb4890 0x400d4554:0x3ffb4900 0x400e1ff9:0x3ffb4930
+
+
+
+
+ELF file SHA256: 9841e375a
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6272
+load:0x40078000,len:15824
+load:0x40080400,len:3988
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.1-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Oct 11 2026 12:16:37[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (36) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (63) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (76) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b41ch ( 46108) map[0m
+[0;32mI (103) esp_image: segment 1: paddr=0001b444 vaddr=3ffb0000 size=02b78h ( 11128) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001dfc4 vaddr=40080000 size=02054h (  8276) load[0m
+[0;32mI (111) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=142b8h ( 82616) map[0m
+[0;32mI (144) esp_image: segment 4: paddr=000342e0 vaddr=40082054 size=09e90h ( 40592) load[0m
+[0;32mI (161) esp_image: segment 5: paddr=0003e178 vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (167) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (167) boot: Disabling RNG early entropy source...[0m
+[0;33mW (189) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m

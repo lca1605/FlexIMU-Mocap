@@ -1,0 +1,37 @@
+esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32/io_mux.c.obj: \
+ /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_hw_support/port/esp32/io_mux.c \
+ /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_hw_support/include/esp_private/io_mux.h \
+ /home/lecongcomputer/ARM_Car/.tools/espressif/tools/xtensa-esp-elf/esp-15.2.0_20251204/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/15.2.0/include/stdbool.h \
+ /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_common/include/esp_err.h \
+ /home/lecongcomputer/ARM_Car/.tools/espressif/tools/xtensa-esp-elf/esp-15.2.0_20251204/xtensa-esp-elf/picolibc/include/stdint.h \
+ /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_libc/platform_include/sys/cdefs.h \
+ /home/lecongcomputer/ARM_Car/.tools/espressif/tools/xtensa-esp-elf/esp-15.2.0_20251204/xtensa-esp-elf/picolibc/include/sys/cdefs.h \
+ /home/lecongcomputer/ARM_Car/.tools/espressif/tools/xtensa-esp-elf/esp-15.2.0_20251204/xtensa-esp-elf/picolibc/include/sys/config.h \
+ /home/lecongcomputer/ARM_Car/.tools/espressif/tools/xtensa-esp-elf/esp-15.2.0_20251204/xtensa-esp-elf/picolibc/include/machine/ieeefp.h \
+ /home/lecongcomputer/ARM_Car/.tools/espressif/tools/xtensa-esp-elf/esp-15.2.0_20251204/xtensa-esp-elf/picolibc/include/sys/features.h \
+ /home/lecongcomputer/ARM_Car/.tools/espressif/tools/xtensa-esp-elf/esp-15.2.0_20251204/xtensa-esp-elf/picolibc/include/picolibc.h \
+ /home/lecongcomputer/ARM_Car/.tools/espressif/tools/xtensa-esp-elf/esp-15.2.0_20251204/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/15.2.0/include/float.h \
+ /home/lecongcomputer/ARM_Car/.tools/espressif/tools/xtensa-esp-elf/esp-15.2.0_20251204/xtensa-esp-elf/picolibc/include/machine/_default_types.h \
+ /home/lecongcomputer/esp32_right_hand_tracker/esp32_firmware/build/config/sdkconfig.h \
+ /home/lecongcomputer/ARM_Car/.tools/espressif/tools/xtensa-esp-elf/esp-15.2.0_20251204/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/15.2.0/include/stddef.h \
+ /home/lecongcomputer/ARM_Car/.tools/espressif/tools/xtensa-esp-elf/esp-15.2.0_20251204/xtensa-esp-elf/picolibc/include/sys/_intsup.h \
+ /home/lecongcomputer/ARM_Car/.tools/espressif/tools/xtensa-esp-elf/esp-15.2.0_20251204/xtensa-esp-elf/picolibc/include/sys/_stdint.h \
+ /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_libc/platform_include/stdio.h \
+ /home/lecongcomputer/ARM_Car/.tools/espressif/tools/xtensa-esp-elf/esp-15.2.0_20251204/xtensa-esp-elf/picolibc/include/stdio.h \
+ /home/lecongcomputer/ARM_Car/.tools/espressif/tools/xtensa-esp-elf/esp-15.2.0_20251204/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/15.2.0/include/stdarg.h \
+ /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_libc/platform_include/sys/lock.h \
+ /home/lecongcomputer/ARM_Car/.tools/espressif/tools/xtensa-esp-elf/esp-15.2.0_20251204/xtensa-esp-elf/picolibc/include/sys/lock.h \
+ /home/lecongcomputer/ARM_Car/.tools/espressif/tools/xtensa-esp-elf/esp-15.2.0_20251204/xtensa-esp-elf/picolibc/include/sys/_types.h \
+ /home/lecongcomputer/ARM_Car/.tools/espressif/tools/xtensa-esp-elf/esp-15.2.0_20251204/xtensa-esp-elf/picolibc/include/machine/_types.h \
+ /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_libc/platform_include/assert.h \
+ /home/lecongcomputer/ARM_Car/.tools/espressif/tools/xtensa-esp-elf/esp-15.2.0_20251204/xtensa-esp-elf/picolibc/include/stdlib.h \
+ /home/lecongcomputer/ARM_Car/.tools/espressif/tools/xtensa-esp-elf/esp-15.2.0_20251204/xtensa-esp-elf/picolibc/include/machine/stdlib.h \
+ /home/lecongcomputer/ARM_Car/.tools/espressif/tools/xtensa-esp-elf/esp-15.2.0_20251204/xtensa-esp-elf/picolibc/include/alloca.h \
+ /home/lecongcomputer/ARM_Car/.tools/espressif/tools/xtensa-esp-elf/esp-15.2.0_20251204/xtensa-esp-elf/picolibc/include/sys/_locale.h \
+ /home/lecongcomputer/ARM_Car/.tools/espressif/tools/xtensa-esp-elf/esp-15.2.0_20251204/xtensa-esp-elf/picolibc/include/sys/_wait.h \
+ /home/lecongcomputer/ARM_Car/.tools/espressif/tools/xtensa-esp-elf/esp-15.2.0_20251204/xtensa-esp-elf/picolibc/include/assert.h \
+ /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_common/include/esp_compiler.h \
+ /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/soc/esp32/include/soc/clk_tree_defs.h \
+ /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_hal_gpio/esp32/include/soc/gpio_num.h \
+ /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
+ /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/soc/include/soc/soc_caps_eval.h

@@ -1,0 +1,36 @@
+esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_clock_loader.c.obj: \
+ /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/bootloader_support/src/bootloader_clock_loader.c \
+ /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_hw_support/port/esp32/include/soc/rtc.h \
+ /home/lecongcomputer/ARM_Car/.tools/espressif/tools/xtensa-esp-elf/esp-15.2.0_20251204/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/15.2.0/include/stdbool.h \
+ /home/lecongcomputer/ARM_Car/.tools/espressif/tools/xtensa-esp-elf/esp-15.2.0_20251204/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/15.2.0/include/stddef.h \
+ /home/lecongcomputer/ARM_Car/.tools/espressif/tools/xtensa-esp-elf/esp-15.2.0_20251204/xtensa-esp-elf/picolibc/include/stdint.h \
+ /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_libc/platform_include/sys/cdefs.h \
+ /home/lecongcomputer/ARM_Car/.tools/espressif/tools/xtensa-esp-elf/esp-15.2.0_20251204/xtensa-esp-elf/picolibc/include/sys/cdefs.h \
+ /home/lecongcomputer/ARM_Car/.tools/espressif/tools/xtensa-esp-elf/esp-15.2.0_20251204/xtensa-esp-elf/picolibc/include/sys/config.h \
+ /home/lecongcomputer/ARM_Car/.tools/espressif/tools/xtensa-esp-elf/esp-15.2.0_20251204/xtensa-esp-elf/picolibc/include/machine/ieeefp.h \
+ /home/lecongcomputer/ARM_Car/.tools/espressif/tools/xtensa-esp-elf/esp-15.2.0_20251204/xtensa-esp-elf/picolibc/include/sys/features.h \
+ /home/lecongcomputer/ARM_Car/.tools/espressif/tools/xtensa-esp-elf/esp-15.2.0_20251204/xtensa-esp-elf/picolibc/include/picolibc.h \
+ /home/lecongcomputer/ARM_Car/.tools/espressif/tools/xtensa-esp-elf/esp-15.2.0_20251204/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/15.2.0/include/float.h \
+ /home/lecongcomputer/ARM_Car/.tools/espressif/tools/xtensa-esp-elf/esp-15.2.0_20251204/xtensa-esp-elf/picolibc/include/machine/_default_types.h \
+ /home/lecongcomputer/esp32_right_hand_tracker/esp32_firmware/build/bootloader/config/sdkconfig.h \
+ /home/lecongcomputer/ARM_Car/.tools/espressif/tools/xtensa-esp-elf/esp-15.2.0_20251204/xtensa-esp-elf/picolibc/include/sys/_intsup.h \
+ /home/lecongcomputer/ARM_Car/.tools/espressif/tools/xtensa-esp-elf/esp-15.2.0_20251204/xtensa-esp-elf/picolibc/include/sys/_stdint.h \
+ /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/soc/esp32/include/soc/soc.h \
+ /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_common/include/esp_assert.h \
+ /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_libc/platform_include/assert.h \
+ /home/lecongcomputer/ARM_Car/.tools/espressif/tools/xtensa-esp-elf/esp-15.2.0_20251204/xtensa-esp-elf/picolibc/include/stdlib.h \
+ /home/lecongcomputer/ARM_Car/.tools/espressif/tools/xtensa-esp-elf/esp-15.2.0_20251204/xtensa-esp-elf/picolibc/include/machine/stdlib.h \
+ /home/lecongcomputer/ARM_Car/.tools/espressif/tools/xtensa-esp-elf/esp-15.2.0_20251204/xtensa-esp-elf/picolibc/include/alloca.h \
+ /home/lecongcomputer/ARM_Car/.tools/espressif/tools/xtensa-esp-elf/esp-15.2.0_20251204/xtensa-esp-elf/picolibc/include/sys/_locale.h \
+ /home/lecongcomputer/ARM_Car/.tools/espressif/tools/xtensa-esp-elf/esp-15.2.0_20251204/xtensa-esp-elf/picolibc/include/sys/_wait.h \
+ /home/lecongcomputer/ARM_Car/.tools/espressif/tools/xtensa-esp-elf/esp-15.2.0_20251204/xtensa-esp-elf/picolibc/include/assert.h \
+ /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/soc/esp32/include/soc/soc_caps.h \
+ /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/soc/include/soc/soc_caps_eval.h \
+ /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/soc/esp32/include/soc/interrupts.h \
+ /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/esp_common/include/esp_bit_defs.h \
+ /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/soc/esp32/register/soc/reg_base.h \
+ /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/soc/include/soc/rtc_periph.h \
+ /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/soc/include/soc/rtc_cntl_periph.h \
+ /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/soc/esp32/register/soc/rtc_cntl_reg.h \
+ /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/soc/esp32/register/soc/rtc_cntl_struct.h \
+ /home/lecongcomputer/ARM_Car/.tools/esp-idf/components/soc/esp32/include/soc/clk_tree_defs.h

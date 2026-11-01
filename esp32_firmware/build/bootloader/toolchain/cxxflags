@@ -1,0 +1,7 @@
+"-specs=/home/lecongcomputer/esp32_right_hand_tracker/esp32_firmware/build/bootloader/specs/picolibc.specs"
+-Wno-frame-address
+-mlongcalls
+-fno-builtin-memcpy
+-fno-builtin-memset
+-fno-builtin-bzero
+-fno-rtti
