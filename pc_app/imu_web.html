@@ -142,6 +142,7 @@
       });
     }
 
+    // Khi úp tay ở tư thế chuẩn, phía lòng bàn tay là -Z trong hệ cục bộ.
     function addFinger(base, planarDirection, lengths, width, maxAngles, bend, fill) {
       let position = [...base];
       let cumulativeBend = 0;
@@ -150,7 +151,7 @@
         const next = [
           position[0] + planarDirection[0] * Math.cos(cumulativeBend) * length,
           position[1] + planarDirection[1] * Math.cos(cumulativeBend) * length,
-          position[2] + Math.sin(cumulativeBend) * length
+          position[2] - Math.sin(cumulativeBend) * length
         ];
         addSegmentBox(position, next, width, 0.44, fill);
         position = next;

@@ -185,11 +185,11 @@ class MadgwickFilter:
 
         if accelUnit is not None:
             ax, ay, az = accelUnit
-            if magUnit is None:
-                step = self._imuGradient(q0, q1, q2, q3, ax, ay, az)
-            else:
+            step = self._imuGradient(q0, q1, q2, q3, ax, ay, az)
+            if magUnit is not None:
                 mx, my, mz = magUnit
-                step = self._margGradient(q0, q1, q2, q3, ax, ay, az, mx, my, mz)
+                magneticStep = self._magneticGradient(q0, q1, q2, q3, mx, my, mz)
+                step = tuple(gravity + magnetic for gravity, magnetic in zip(step, magneticStep))
             stepNorm = math.sqrt(sum(value * value for value in step))
             if stepNorm > 1e-12:
                 for index in range(4):
@@ -202,21 +202,21 @@ class MadgwickFilter:
     @staticmethod
     def _imuGradient(q0: float, q1: float, q2: float, q3: float,
                      ax: float, ay: float, az: float) -> Quaternion:
-        """Gradient 6-DOF dùng khi từ kế bằng 0 hoặc chưa sẵn sàng."""
+        """Tính J^T f cho sai số hướng trọng lực, dùng chung cho 6-DOF và 9-DOF."""
+        fx = 2.0 * (q1 * q3 - q0 * q2) - ax
+        fy = 2.0 * (q0 * q1 + q2 * q3) - ay
+        fz = 2.0 * (0.5 - q1 * q1 - q2 * q2) - az
         return (
-            4.0 * q0 * q1 * q1 + 4.0 * q0 * q2 * q2 + 2.0 * q2 * ax - 2.0 * q1 * ay,
-            4.0 * q1 ** 3 + 4.0 * q1 * q2 * q2 - 4.0 * q1 + 2.0 * q3 * ax
-            - 2.0 * q0 * ay + 4.0 * q1 * az,
-            4.0 * q0 * q0 * q2 + 4.0 * q1 * q1 * q2 - 4.0 * q2
-            - 2.0 * q0 * ax + 2.0 * q3 * ay + 4.0 * q2 * az,
-            4.0 * q1 * q1 * q3 + 4.0 * q2 * q2 * q3 - 2.0 * q1 * ax + 2.0 * q2 * ay,
+            -2.0 * q2 * fx + 2.0 * q1 * fy,
+            2.0 * q3 * fx + 2.0 * q0 * fy - 4.0 * q1 * fz,
+            -2.0 * q0 * fx + 2.0 * q3 * fy - 4.0 * q2 * fz,
+            2.0 * q1 * fx + 2.0 * q2 * fy,
         )
 
     @staticmethod
-    def _margGradient(q0: float, q1: float, q2: float, q3: float,
-                      ax: float, ay: float, az: float,
-                      mx: float, my: float, mz: float) -> Quaternion:
-        """Gradient 9-DOF của Madgwick với tham chiếu từ trường tự cập nhật."""
+    def _magneticGradient(q0: float, q1: float, q2: float, q3: float,
+                          mx: float, my: float, mz: float) -> Quaternion:
+        """Tính phần gradient từ tham chiếu từ trường tự cập nhật."""
         hx = 2.0 * mx * (0.5 - q2 * q2 - q3 * q3) + 2.0 * my * (
             q1 * q2 - q0 * q3) + 2.0 * mz * (q1 * q3 + q0 * q2)
         hy = 2.0 * mx * (q1 * q2 + q0 * q3) + 2.0 * my * (
@@ -225,33 +225,24 @@ class MadgwickFilter:
         vertical = 2.0 * mx * (q1 * q3 - q0 * q2) + 2.0 * my * (
             q2 * q3 + q0 * q1) + 2.0 * mz * (0.5 - q1 * q1 - q2 * q2)
 
-        f = (
-            2.0 * (q1 * q3 - q0 * q2) - ax,
-            2.0 * (q0 * q1 + q2 * q3) - ay,
-            2.0 * (0.5 - q1 * q1 - q2 * q2) - az,
-            2.0 * horizontal * (0.5 - q2 * q2 - q3 * q3)
-            + 2.0 * vertical * (q1 * q3 - q0 * q2) - mx,
-            2.0 * horizontal * (q1 * q2 - q0 * q3)
-            + 2.0 * vertical * (q0 * q1 + q2 * q3) - my,
-            2.0 * horizontal * (q0 * q2 + q1 * q3)
-            + 2.0 * vertical * (0.5 - q1 * q1 - q2 * q2) - mz,
-        )
+        fx = (2.0 * horizontal * (0.5 - q2 * q2 - q3 * q3)
+              + 2.0 * vertical * (q1 * q3 - q0 * q2) - mx)
+        fy = (2.0 * horizontal * (q1 * q2 - q0 * q3)
+              + 2.0 * vertical * (q0 * q1 + q2 * q3) - my)
+        fz = (2.0 * horizontal * (q0 * q2 + q1 * q3)
+              + 2.0 * vertical * (0.5 - q1 * q1 - q2 * q2) - mz)
         # J^T f được viết tường minh để không phụ thuộc thư viện ma trận ngoài.
         return (
-            -2.0 * q2 * f[0] + 2.0 * q1 * f[1]
-            - 2.0 * vertical * q2 * f[3]
-            + (-2.0 * horizontal * q3 + 2.0 * vertical * q1) * f[4]
-            + 2.0 * horizontal * q2 * f[5],
-            2.0 * q3 * f[0] + 2.0 * q0 * f[1] - 4.0 * q1 * f[2]
-            + 2.0 * vertical * q3 * f[3]
-            + (2.0 * horizontal * q2 + 2.0 * vertical * q0) * f[4]
-            + (2.0 * horizontal * q3 - 4.0 * vertical * q1) * f[5],
-            -2.0 * q0 * f[0] + 2.0 * q3 * f[1] - 4.0 * q2 * f[2]
-            + (-4.0 * horizontal * q2 - 2.0 * vertical * q0) * f[3]
-            + (2.0 * horizontal * q1 + 2.0 * vertical * q3) * f[4]
-            + (2.0 * horizontal * q0 - 4.0 * vertical * q2) * f[5],
-            2.0 * q1 * f[0] + 2.0 * q2 * f[1]
-            + (-4.0 * horizontal * q3 + 2.0 * vertical * q1) * f[3]
-            + (-2.0 * horizontal * q0 + 2.0 * vertical * q2) * f[4]
-            + 2.0 * horizontal * q1 * f[5],
+            -2.0 * vertical * q2 * fx
+            + (-2.0 * horizontal * q3 + 2.0 * vertical * q1) * fy
+            + 2.0 * horizontal * q2 * fz,
+            2.0 * vertical * q3 * fx
+            + (2.0 * horizontal * q2 + 2.0 * vertical * q0) * fy
+            + (2.0 * horizontal * q3 - 4.0 * vertical * q1) * fz,
+            (-4.0 * horizontal * q2 - 2.0 * vertical * q0) * fx
+            + (2.0 * horizontal * q1 + 2.0 * vertical * q3) * fy
+            + (2.0 * horizontal * q0 - 4.0 * vertical * q2) * fz,
+            (-4.0 * horizontal * q3 + 2.0 * vertical * q1) * fx
+            + (-2.0 * horizontal * q0 + 2.0 * vertical * q2) * fy
+            + 2.0 * horizontal * q1 * fz,
         )

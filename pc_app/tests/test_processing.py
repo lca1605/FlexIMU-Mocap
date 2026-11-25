@@ -68,7 +68,11 @@ def test_straight_fingers_extend_toward_negative_x():
     assert math.isclose(index_finger[-1, 2], 0.0, abs_tol=1e-9)
 
 
-def test_bent_finger_moves_toward_positive_z():
-    state = HandState((0, 1, 0, 0, 0), (1, 0, 0, 0), (0, 0, 0, 0, 0))
-    index_finger = hand_lines(state)[2]
-    assert index_finger[-1, 2] > 0.0
+@pytest.mark.parametrize(("quaternion", "palmZSign"), [
+    ((1, 0, 0, 0), -1),
+    ((0, 1, 0, 0), 1),
+])
+def testBentFingersCurlTowardPalm(quaternion, palmZSign):
+    state = HandState((1, 1, 1, 1, 1), quaternion, (0, 0, 0, 0, 0))
+    for finger in hand_lines(state)[1:]:
+        assert ((finger[1:, 2] - finger[0, 2]) * palmZSign > 0).all()

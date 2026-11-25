@@ -1,7 +1,7 @@
 # Test riêng BNO055 bằng bàn tay phải 3D
 
-Phần test này chỉ cần ESP32 và BNO055. Năm flex sensor có thể chưa cắm; web app
-chỉ đọc các trường IMU trong frame UART và bỏ qua dữ liệu flex.
+Phần test này chỉ cần ESP32 và BNO055 để kiểm tra hướng xoay. Web app
+đọc cả IMU và flex. Cần đấu các flex sensor để kiểm tra độ gập.
 
 ## Sơ đồ chân
 
@@ -31,18 +31,17 @@ Firmware dùng UART `115200-8-N-1`; `AD0` và `INT` không cần nối trong ch�
 
 ## Chạy test
 
-Firmware hiện tại đã đọc BNO055 và gửi dữ liệu ở 50 Hz. Build và nạp firmware:
+Firmware đọc BNO055 và gửi dữ liệu ở 50 Hz. Chạy các lệnh dưới đây từ thư mục gốc repo trên Linux. Xem [README](../README.md) để cài môi trường và chạy trên Windows.
 
 ```bash
-cd /home/lecongcomputer/esp32_right_hand_tracker
-./hand_tracker.sh build
-./hand_tracker.sh flash /dev/ttyUSB0
+bash hand_tracker.sh build
+bash hand_tracker.sh flash /dev/ttyUSB0
 ```
 
 Chạy web app với ESP32 thật:
 
 ```bash
-./hand_tracker.sh imu-test /dev/ttyUSB0
+bash hand_tracker.sh imu-test /dev/ttyUSB0
 ```
 
 Mở `http://127.0.0.1:8000` trên trình duyệt. Khi xoay BNO055, bàn tay phải sẽ xoay
@@ -55,7 +54,7 @@ bias gyro và trừ bias trước bộ lọc Madgwick; giá trị bias hiện �
 Muốn kiểm tra giao diện trước khi cắm ESP32:
 
 ```bash
-./hand_tracker.sh imu-demo
+bash hand_tracker.sh imu-demo
 ```
 
 Nếu không mở được UART, kiểm tra tên cổng bằng `ls /dev/ttyUSB* /dev/ttyACM*` và

@@ -15,11 +15,12 @@ class FlexCalibration:
 
 # Hai mốc điện trở ánh xạ tuyến tính thành độ gập chuẩn hóa 0..1 của từng ngón.
 FLEX_CALIBRATIONS = (
-    FlexCalibration("thumb", 200_000.0, 340_000.0),
-    FlexCalibration("index", 150_000.0, 230_000.0),
-    FlexCalibration("middle", 130_000.0, 310_000.0),
-    FlexCalibration("ring", 100_000.0, 270_000.0),
-    FlexCalibration("little", 230_000.0, 425_000.0),
+    # Mốc quy đổi từ trung vị ADC của 32 mẫu duỗi và 31 mẫu gập ngày 21/11/2026.
+    FlexCalibration("thumb", 433_063.0, 834_918.0),
+    FlexCalibration("index", 301_203.0, 532_003.0),
+    FlexCalibration("middle", 313_077.0, 592_353.0),
+    FlexCalibration("ring", 342_711.0, 750_797.0),
+    FlexCalibration("little", 538_653.0, 865_422.0),
 )
 
 # Tổng góc MCP/PIP/DIP tại độ gập cực đại. Có thể chỉnh sau khi thử găng thật.

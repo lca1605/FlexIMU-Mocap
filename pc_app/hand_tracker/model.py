@@ -21,7 +21,8 @@ def hand_lines(state: HandState) -> list[np.ndarray]:
     palm = np.array([[-0.065, 0.04, 0], [0.065, 0.04, 0], [0.06, -0.025, 0],
                      [-0.05, -0.025, 0], [-0.065, 0.04, 0]], dtype=float)
     lines.append(palm)
-    # Tính nối tiếp ba khớp; bend=0 là duỗi và bend=1 là gập cực đại.
+    # bend=0 là duỗi và bend=1 là gập cực đại. Gập về +Z trong hình học
+    # gốc để sau đổi trục, ngón gập về -Z ở phía lòng bàn tay.
     for base, lengths, spread, max_angles, bend in zip(
             BASES, LENGTHS, SPREAD_DEG, FINGER_MAX_ANGLES_DEG, state.bends):
         points = [base.copy()]
@@ -33,7 +34,7 @@ def hand_lines(state: HandState) -> list[np.ndarray]:
             direction = np.array([
                 math.sin(spread_rad) * math.cos(cumulative_bend),
                 -math.cos(spread_rad) * math.cos(cumulative_bend),
-                -math.sin(cumulative_bend),
+                math.sin(cumulative_bend),
             ])
             position = position + length * direction
             points.append(position.copy())

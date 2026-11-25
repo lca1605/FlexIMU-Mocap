@@ -1,0 +1,43 @@
+/esp32_firmware/build/
+/esp32_firmware/build-local/
+/.venv/
+/.venv-local/
+.pytest_cache/
+__pycache__/
+*.pyc
+
+# ESP-IDF và CMake
+/esp32_firmware/build-*/
+/esp32_firmware/managed_components/
+/esp32_firmware/sdkconfig.old
+CMakeUserPresets.json
+
+# Python
+.venv/
+venv/
+*.py[cod]
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+*.egg-info/
+dist/
+
+# Cấu hình cục bộ và thông tin xác thực
+.env
+.env.*
+!.env.example
+!.env.*.example
+*.pem
+*.key
+.vscode/
+.idea/
+
+# Tệp hệ điều hành và bản trình bày cục bộ
+.DS_Store
+Thumbs.db
+*.swp
+*.log
+/*.pptx
+/slides/*.pptx
